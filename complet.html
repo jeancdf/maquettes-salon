@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><title>l’épi — Formule Complet (maquette)</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="style.css">
+<style>
+.site{background:var(--paper)}
+.topbar{background:var(--ink);color:#D8DBEA;font-size:13px;display:flex;justify-content:space-between;align-items:center;padding:10px 72px}
+.topbar span{display:inline-flex;align-items:center;gap:8px;margin-right:26px}
+.topbar svg{width:14px;height:14px;color:#F7CFC8}
+.topbar a{color:#fff;font-weight:600;text-decoration:none}
+header{display:flex;align-items:center;justify-content:space-between;padding:20px 72px;background:var(--paper);border-bottom:1px solid var(--line)}
+.mono{width:46px;height:46px;border-radius:50%;background:var(--terra);display:grid;place-items:center}
+.mono svg{width:24px;height:24px}
+header nav{display:flex;gap:34px;font-size:15px;font-weight:500}
+header nav a{color:var(--ink);text-decoration:none;padding:6px 0}
+header nav a.on{border-bottom:2px solid var(--terra)}
+.hdr-r{display:flex;align-items:center;gap:20px}
+.hdr-r .ig{width:40px;height:40px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center}
+.hdr-r .ig svg{width:18px;height:18px}
+
+/* Hero */
+.hero{background:var(--cream);padding:64px 72px 0;display:grid;grid-template-columns:1fr 1.08fr;gap:56px;position:relative;overflow:hidden}
+.hero h1{font-family:'Bricolage Grotesque',sans-serif;font-weight:350;font-size:84px;line-height:.98;letter-spacing:-.035em;margin:20px 0 26px}
+.hero h1 em{font-style:italic;color:var(--terra);font-weight:400}
+.hero .lede{font-size:19px;line-height:1.6;color:#3D4259;max-width:480px}
+.hero .ctas{display:flex;gap:14px;margin-top:36px}
+.hero .facts{display:flex;gap:0;margin:56px 0 64px;border-top:1px solid var(--line);padding-top:24px}
+.hero .facts div{flex:1;padding-right:20px}
+.hero .facts b{display:block;font-family:'Bricolage Grotesque',sans-serif;font-weight:500;font-size:19px;margin-bottom:4px}
+.hero .facts span{font-size:14px;color:var(--muted);line-height:1.45}
+.mosaic{position:relative;height:640px}
+.mosaic .a{position:absolute;left:0;top:0;width:68%;height:600px;border-radius:300px 300px 8px 8px;background:url(img/brushing.jpg) 60% 30%/cover}
+.mosaic .b{position:absolute;right:0;top:48px;width:29%;height:250px;border-radius:8px;background:url(img/salon-noir-blanc.jpg) 30% 50%/cover}
+.mosaic .c{position:absolute;right:0;top:322px;width:29%;height:278px;border-radius:8px;background:url(img/bac.jpg) 45% 50%/cover}
+.mosaic .badge{position:absolute;left:-36px;bottom:92px;background:var(--paper);border-radius:10px;padding:16px 20px;box-shadow:0 14px 40px rgba(18,22,43,.14);display:flex;gap:14px;align-items:center}
+.mosaic .badge .dot{width:10px;height:10px;border-radius:50%;background:#4F8A5B;box-shadow:0 0 0 5px #DCEBDD}
+.mosaic .badge b{display:block;font-size:15px}.mosaic .badge span{font-size:13px;color:var(--muted)}
+
+/* Section helpers */
+section.s{padding:96px 72px}
+.sh{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:44px}
+.sh h2{font-family:'Bricolage Grotesque',sans-serif;font-weight:400;font-size:52px;letter-spacing:-.025em;line-height:1.02;margin-top:12px}
+.sh h2 em{font-style:italic;color:var(--terra)}
+.sh .more{font-weight:600;font-size:15px;color:var(--ink);display:flex;align-items:center;gap:10px;text-decoration:none;border-bottom:1.5px solid var(--ink);padding-bottom:4px}
+.sh .more svg{width:16px;height:16px}
+
+/* Services preview */
+.svc{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.svc .item .ph-img{height:300px;border-radius:8px;background-size:cover;background-position:center}
+.svc .item h3{font-family:'Bricolage Grotesque',sans-serif;font-weight:500;font-size:25px;margin:20px 0 8px;display:flex;justify-content:space-between;align-items:baseline}
+.svc .item h3 small{font-family:'Manrope';font-size:14px;font-weight:600;color:var(--terra)}
+.svc .item p{font-size:15px;color:var(--muted);line-height:1.55}
+
+/* Salon */
+.salon{display:grid;grid-template-columns:1fr 1fr;gap:0;background:var(--sage);color:#EEF0F8}
+.salon .img{min-height:520px;background:url(img/salon.jpg) center/cover}
+.salon .txt{padding:84px 80px}
+.salon .eyebrow{color:#F7CFC8}
+.salon h2{font-family:'Bricolage Grotesque',sans-serif;font-weight:400;font-size:48px;letter-spacing:-.02em;line-height:1.05;margin:14px 0 22px}
+.salon h2 em{font-style:italic}
+.salon p{font-size:17px;line-height:1.65;color:#C9CDDD;max-width:500px}
+.salon ul{list-style:none;margin-top:30px;display:grid;grid-template-columns:1fr 1fr;gap:14px 28px;max-width:520px}
+.salon li{display:flex;gap:12px;align-items:center;font-size:15.5px}
+.salon li svg{width:20px;height:20px;flex:none;color:#F7CFC8}
+
+/* Team */
+.team{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.member .pic{height:420px;border-radius:8px;background-size:cover;background-position:center 30%}
+.member h3{font-family:'Bricolage Grotesque',sans-serif;font-weight:500;font-size:26px;margin-top:20px}
+.member .role{font-size:14px;color:var(--terra);font-weight:600;margin-top:4px;letter-spacing:.02em}
+.member p{font-size:15px;color:var(--muted);line-height:1.55;margin-top:10px;max-width:360px}
+
+/* Gallery */
+.gal{display:grid;grid-template-columns:1.25fr 1fr 1fr 1.25fr;grid-template-rows:260px 260px;gap:14px}
+.gal div{border-radius:8px;background-size:cover;background-position:center;position:relative}
+.gal div span{position:absolute;left:14px;bottom:14px;background:rgba(255,253,249,.92);font-size:12.5px;font-weight:600;padding:6px 11px;border-radius:999px}
+.gal .tall{grid-row:span 2}
+
+/* Booking band */
+.band{margin:0 72px;background:var(--terra);color:#fff;border-radius:14px;padding:52px 60px;display:flex;justify-content:space-between;align-items:center;position:relative;overflow:hidden}
+.band h2{font-family:'Bricolage Grotesque',sans-serif;font-weight:400;font-size:44px;letter-spacing:-.02em;line-height:1.05}
+.band h2 em{font-style:italic}
+.band p{font-size:16.5px;color:#DCE1FF;margin-top:12px}
+.band .btn.light{font-size:16px;padding:17px 28px}
+.band .ring{position:absolute;right:300px;top:-120px;width:300px;height:300px;border:1.5px solid rgba(255,255,255,.18);border-radius:50%}
+
+/* Practical */
+.prac{display:grid;grid-template-columns:1fr 1fr 1.35fr;gap:56px}
+.prac h3{font-family:'Bricolage Grotesque',sans-serif;font-weight:500;font-size:24px;margin-bottom:16px}
+.prac p{font-size:15.5px;line-height:1.65}
+.prac .sub{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700;margin:22px 0 8px}
+.contact-line{display:flex;align-items:center;gap:12px;font-size:15.5px;padding:7px 0}
+.contact-line svg{width:18px;height:18px;color:var(--terra);flex:none}
+.prac .map{height:330px}
+
+footer{background:var(--ink);color:#C5C9D8;padding:64px 72px 28px}
+.f-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;padding-bottom:44px;border-bottom:1px solid #262B47}
+footer .logo .word{color:#fff}
+footer .logo .sub{color:#9AA0B8}
+footer h4{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#fff;margin-bottom:16px}
+footer .f-top a,footer .f-top div.l{display:block;color:#C5C9D8;text-decoration:none;font-size:15px;padding:5px 0}
+footer .f-top p{font-size:15px;line-height:1.6;margin-top:18px;max-width:300px}
+.f-bot{display:flex;justify-content:space-between;padding-top:24px;font-size:13px;color:#8A8FA5}
+.f-bot a{color:#8A8FA5;margin-left:22px;text-decoration:none}
+.soc{display:flex;gap:10px;margin-top:22px}.soc i{width:38px;height:38px;border:1px solid #363C5C;border-radius:50%;display:grid;place-items:center}
+.soc svg{width:17px;height:17px;color:#D8DBEA}
+</style>
+<style>
+/* direction v2 : grotesque + cobalt / rose poudré */
+.logo .word{font-style:normal!important;font-weight:800!important;letter-spacing:-.05em!important}
+.logo .word b{color:var(--terra)} footer .logo .word b{color:var(--blush)}
+.caption h1,.caption .price b{font-weight:700!important;letter-spacing:-.035em!important}
+.site h1{font-size:76px!important;font-weight:700!important;letter-spacing:-.04em!important}
+.site h2{font-weight:700!important;letter-spacing:-.035em!important}
+.site h3,.site .facts b{font-weight:700!important;letter-spacing:-.02em}
+.site h1 em,.site h2 em{font-style:normal!important;color:inherit!important;background:linear-gradient(transparent 62%,var(--blush) 62%,var(--blush) 92%,transparent 92%);padding:0 .05em}
+.salon h2 em{background:none!important;color:var(--blush)!important}
+.band h2 em{background:linear-gradient(transparent 62%,rgba(255,255,255,.28) 62%,rgba(255,255,255,.28) 92%,transparent 92%)!important}
+.price-row b{font-weight:700}
+.eyebrow{letter-spacing:.14em}
+.ph{border-radius:6px}
+</style><style>/* responsive */
+header,.topbar,.hero,section.s,.services,.info,footer{padding-left:var(--gut)!important;padding-right:var(--gut)!important}
+
+@media (max-width:1100px){
+  :root{--gut:32px}
+  header nav{display:none!important}
+  .hero{grid-template-columns:1fr!important;gap:8px!important}
+  .hero .facts{margin-bottom:40px!important}
+  .mosaic .badge{left:16px!important}
+  .svc{grid-template-columns:1fr 1fr!important;row-gap:36px!important}
+  .salon{grid-template-columns:1fr!important}
+  .salon .img{min-height:380px!important}
+  .salon .txt{padding:56px 32px!important}
+  .team{gap:16px!important} .member .pic{height:320px!important}
+  .gal{grid-template-columns:1fr 1fr!important;grid-template-rows:none!important;grid-auto-rows:240px}
+  .band{margin:0!important}
+  .band .ring{display:none}
+  .prac{grid-template-columns:1fr 1fr!important}
+  .prac>div:last-child{grid-column:span 2}
+  .f-top{grid-template-columns:1fr 1fr!important}
+}
+@media (max-width:700px){
+  :root{--gut:20px}
+  .topbar>div:first-child{display:none}
+  .topbar{justify-content:center!important}
+  header{padding-top:14px!important;padding-bottom:14px!important}
+  .hdr-r .ig,.logo .sub{display:none!important}
+  header .btn{padding:10px 16px!important;font-size:14px!important}
+  .mono{width:38px!important;height:38px!important}
+  .hero{padding-top:36px!important}
+  .hero h1{font-size:44px!important}
+  .hero .lede{font-size:17px!important}
+  .hero .ctas{flex-wrap:wrap}
+  .hero .facts{flex-direction:column;gap:16px;margin-top:40px!important}
+  .mosaic{height:400px!important}
+  .mosaic .a{width:100%!important;height:400px!important;border-radius:200px 200px 8px 8px!important}
+  .mosaic .b,.mosaic .c{display:none}
+  .mosaic .badge{left:12px!important;bottom:16px!important}
+  section.s{padding-top:56px!important;padding-bottom:56px!important}
+  .sh{display:block!important;margin-bottom:28px!important}
+  .sh h2,.salon h2{font-size:34px!important}
+  .sh .more{display:inline-flex!important;margin-top:16px}
+  .svc,.team,.prac,.f-top{grid-template-columns:1fr!important}
+  .svc .item .ph-img{height:230px!important}
+  .salon .img{min-height:260px!important}
+  .salon .txt{padding:44px 20px!important}
+  .salon ul{grid-template-columns:1fr!important}
+  .member .pic{height:380px!important}
+  .gal{grid-auto-rows:190px;gap:10px!important}
+  .gal .tall{grid-row:auto!important}
+  .band{flex-direction:column;align-items:flex-start!important;gap:24px;padding:36px 24px!important}
+  .band h2{font-size:32px!important}
+  .prac>div:last-child{grid-column:auto}
+  .prac .map{height:240px!important}
+  footer{padding-top:44px!important}
+  .f-bot{flex-direction:column;gap:10px}
+  .f-bot a{margin:0 16px 0 0!important}
+}
+</style>
+</head>
+<body>
+
+<div class="site">
+    <div class="topbar">
+      <div>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Mar – ven 9h30 – 19h · sam 9h – 18h</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>[Adresse du salon], [Ville]</span>
+      </div>
+      <div><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>[00 00 00 00 00]</span></div>
+    </div>
+    <header>
+      <a class="logo">
+        <span class="mono"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round"><path d="M12 21V6"/><path d="M12 9c-3 0-4.5-2-4.5-4.5C10.5 4.5 12 6.5 12 9zM12 9c3 0 4.5-2 4.5-4.5C13.5 4.5 12 6.5 12 9z"/><path d="M12 14c-3 0-4.5-2-4.5-4.5 3 0 4.5 2 4.5 4.5zM12 14c3 0 4.5-2 4.5-4.5-3 0-4.5 2-4.5 4.5z"/></svg></span>
+        <span><span class="word" style="display:block">l’épi<b>.</b></span><span class="sub">Coiffure · [Ville]</span></span></a>
+      <nav><a class="on">Accueil</a><a>Prestations</a><a>Équipe</a><a>Galerie</a><a>Contact</a></nav>
+      <div class="hdr-r">
+        <span class="ig"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></span>
+        <a class="btn" style="padding:12px 22px;font-size:14.5px">Prendre rendez-vous</a>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div style="padding-top:28px">
+        <div class="eyebrow">Salon de coiffure indépendant</div>
+        <h1>Des cheveux qui vous <em>ressemblent.</em></h1>
+        <p class="lede">Coupe, couleur, soin et coiffage pour femmes, hommes et enfants. On prend le temps d’écouter avant de couper.</p>
+        <div class="ctas">
+          <a class="btn">Prendre rendez-vous
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="btn ghost" href="#prestations">Découvrir les prestations</a>
+        </div>
+        <div class="facts">
+          <div><b>Conseil d’abord</b><span>Un échange avant chaque prestation</span></div>
+          <div><b>Tous les cheveux</b><span>Lisses, ondulés, bouclés, frisés</span></div>
+          <div><b>Sur rendez-vous</b><span>En ligne ou par téléphone</span></div>
+        </div>
+      </div>
+      <div class="mosaic">
+        <div class="a"></div><div class="b"></div><div class="c"></div>
+        <div class="badge"><span class="dot"></span><div><b>Ouvert aujourd’hui</b><span>9h30 – 19h00</span></div></div>
+      </div>
+    </section>
+
+    <section class="s" id="prestations">
+      <div class="sh">
+        <div><div class="eyebrow">Prestations</div><h2>Ce que l’on fait <em>au salon</em></h2></div>
+        <a class="more">Toutes les prestations et tarifs <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="svc">
+        <div class="item"><div class="ph-img" style="background-image:url(img/coupe.jpg)"></div>
+          <h3>Coupe & coiffage <small>dès 24 €</small></h3><p>Coupe sur mesure, brushing et mise en forme pour tous.</p></div>
+        <div class="item"><div class="ph-img" style="background-image:url(img/balayage.jpg);background-position:center 30%"></div>
+          <h3>Couleur <small>dès 39 €</small></h3><p>Racines, couleur complète, balayage et reflets naturels.</p></div>
+        <div class="item"><div class="ph-img" style="background-image:url(img/soin.jpg);background-position:center 60%"></div>
+          <h3>Soins <small>dès 15 €</small></h3><p>Diagnostic, soin profond et massage crânien au bac.</p></div>
+        <div class="item"><div class="ph-img" style="background-image:url(img/mise-en-plis.jpg)"></div>
+          <h3>Événements <small>dès 55 €</small></h3><p>Chignons et coiffures pour mariages et cérémonies.</p></div>
+      </div>
+    </section>
+
+    <section class="salon">
+      <div class="img"></div>
+      <div class="txt">
+        <div class="eyebrow">Le salon</div>
+        <h2>Un lieu calme, <em>au cœur du quartier.</em></h2>
+        <p>Quatre fauteuils, de la lumière naturelle et une équipe qui vous connaît. Ici, chaque rendez-vous commence par un vrai moment d’échange.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 5 5L20 7"/></svg>Produits professionnels</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 5 5L20 7"/></svg>Accès de plain-pied</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 5 5L20 7"/></svg>Coupes enfants</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 5 5L20 7"/></svg>Carte bancaire acceptée</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="s">
+      <div class="sh">
+        <div><div class="eyebrow">L’équipe</div><h2>Trois coiffeuses, <em>un même soin</em></h2></div>
+        <a class="more">Rencontrer l’équipe <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="team">
+        <div class="member"><div class="pic" style="background-image:url(img/camille.jpg)"></div>
+          <h3>Camille</h3><div class="role">Fondatrice · coloriste</div><p>Balayages lumineux et couleurs qui durent.</p></div>
+        <div class="member"><div class="pic" style="background-image:url(img/ines.jpg)"></div>
+          <h3>Inès</h3><div class="role">Coiffeuse · coupes courtes</div><p>Coupes précises, femmes et hommes.</p></div>
+        <div class="member"><div class="pic" style="background-image:url(img/lea.jpg)"></div>
+          <h3>Léa</h3><div class="role">Coiffeuse · cheveux bouclés</div><p>Boucles, frisés et coiffures de mariage.</p></div>
+      </div>
+    </section>
+
+    <section class="s" style="background:var(--cream)">
+      <div class="sh">
+        <div><div class="eyebrow">Galerie</div><h2>Quelques <em>réalisations</em></h2></div>
+        <a class="more">Voir toute la galerie <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="gal">
+        <div class="tall" style="background-image:url(img/ondulations.jpg);background-position:55% center"><span>Ondulations</span></div>
+        <div style="background-image:url(img/pastel.jpg);background-position:center 25%"><span>Couleur pastel</span></div>
+        <div style="background-image:url(img/boucles.jpg);background-position:center 30%"><span>Boucles naturelles</span></div>
+        <div class="tall" style="background-image:url(img/coupe-courte.jpg);background-position:center 30%"><span>Coupe courte</span></div>
+        <div style="background-image:url(img/blond.jpg);background-position:center 22%"><span>Blond lumineux</span></div>
+        <div style="background-image:url(img/homme.jpg);background-position:center 22%"><span>Coupe homme</span></div>
+      </div>
+    </section>
+
+    <section class="s" style="padding-bottom:40px">
+      <div class="band">
+        <div class="ring"></div>
+        <div><h2>Envie d’un <em>changement</em> ?</h2><p>Choisissez votre prestation et votre créneau en ligne, à toute heure.</p></div>
+        <a class="btn light">Prendre rendez-vous
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </section>
+
+    <section class="s" style="padding-top:64px">
+      <div class="sh" style="margin-bottom:36px"><div><div class="eyebrow">Infos pratiques</div><h2>Venir au salon</h2></div></div>
+      <div class="prac">
+        <div><h3>Horaires</h3>
+          <div class="hours-row"><span>Lundi</span><span class="closed">Fermé</span></div>
+          <div class="hours-row"><span>Mardi</span><span>9h30 – 19h00</span></div>
+          <div class="hours-row"><span>Mercredi</span><span>9h30 – 19h00</span></div>
+          <div class="hours-row"><span>Jeudi</span><span>9h30 – 20h00</span></div>
+          <div class="hours-row"><span>Vendredi</span><span>9h30 – 19h00</span></div>
+          <div class="hours-row"><span>Samedi</span><span>9h00 – 18h00</span></div>
+          <div class="hours-row"><span>Dimanche</span><span class="closed">Fermé</span></div>
+        </div>
+        <div><h3>Adresse & contact</h3>
+          <p><span class="ph">[Adresse du salon]</span><br><span class="ph">[Code postal] [Ville]</span></p>
+          <div class="sub">Accès</div>
+          <p style="font-size:15px">Bus / tram : <span class="ph">[arrêt le plus proche]</span><br>Parking : <span class="ph">[parking à proximité]</span></p>
+          <div class="sub">Contact</div>
+          <div class="contact-line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span class="ph">[00 00 00 00 00]</span></div>
+          <div class="contact-line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span class="ph">[contact@nom-du-salon.fr]</span></div>
+        </div>
+        <div>
+          <div class="map">
+            <svg viewBox="0 0 600 330" preserveAspectRatio="xMidYMid slice"><rect width="600" height="330" fill="#ECEEF3"/>
+              <path d="M0 200 L600 150" stroke="#fff" stroke-width="18"/><path d="M220 0 L270 330" stroke="#fff" stroke-width="13"/><path d="M450 0 L410 330" stroke="#fff" stroke-width="10"/><path d="M0 60 L600 45" stroke="#fff" stroke-width="8"/><path d="M0 285 L600 270" stroke="#fff" stroke-width="8"/><path d="M90 0 L60 330" stroke="#fff" stroke-width="6"/>
+              <rect x="300" y="200" width="90" height="60" rx="4" fill="#D9E1CF"/><rect x="470" y="70" width="110" height="60" rx="4" fill="#D9E1CF"/><path d="M0 120 Q150 100 210 130" stroke="#C9DCE3" stroke-width="10" fill="none"/></svg>
+            <svg viewBox="0 0 34 44" style="position:absolute;left:50%;top:44%;width:38px;height:50px;transform:translate(-50%,-100%)"><path d="M17 43s14-14 14-26A14 14 0 0 0 3 17c0 12 14 26 14 26z" fill="#2C44D8"/><circle cx="17" cy="17" r="5.5" fill="#fff"/></svg>
+            <div style="position:absolute;left:50%;top:46%;transform:translate(-50%,8px);background:#fff;border-radius:6px;padding:6px 12px;font-size:13px;font-weight:600;box-shadow:0 4px 14px rgba(0,0,0,.1)">l’Épi Coiffure</div>
+          </div>
+          <a class="btn" style="margin-top:20px;width:100%;justify-content:center">Prendre rendez-vous en ligne</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="f-top">
+        <div>
+          <a class="logo" style="padding:0;display:flex"><span class="mono" style="width:40px;height:40px"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" style="width:21px;height:21px"><path d="M12 21V6"/><path d="M12 9c-3 0-4.5-2-4.5-4.5C10.5 4.5 12 6.5 12 9zM12 9c3 0 4.5-2 4.5-4.5C13.5 4.5 12 6.5 12 9z"/><path d="M12 14c-3 0-4.5-2-4.5-4.5 3 0 4.5 2 4.5 4.5zM12 14c3 0 4.5-2 4.5-4.5-3 0-4.5 2-4.5 4.5z"/></svg></span><span class="word" style="font-size:28px">l’épi<b style="color:var(--blush)">.</b></span></a>
+          <p>Salon de coiffure indépendant pour femmes, hommes et enfants.</p>
+          <div class="soc">
+            <i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></i>
+            <i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8z"/></svg></i>
+          </div>
+        </div>
+        <div><h4>Pages</h4><a>Accueil</a><a>Prestations</a><a>Équipe</a><a>Galerie</a><a>Contact</a></div>
+        <div><h4>Horaires</h4><div class="l">Mar – ven : 9h30 – 19h</div><div class="l">Jeudi : jusqu’à 20h</div><div class="l">Samedi : 9h – 18h</div><div class="l">Dim. – lun. : fermé</div></div>
+        <div><h4>Contact</h4><div class="l">[Adresse du salon]</div><div class="l">[Code postal] [Ville]</div><div class="l">[00 00 00 00 00]</div><div class="l">[contact@nom-du-salon.fr]</div></div>
+      </div>
+      <div class="f-bot"><span>© l’Épi Coiffure</span><span><a>Mentions légales</a><a>Confidentialité</a><a>Réalisation : [votre nom]</a></span></div>
+    </footer>
+  </div>
+</body></html>

@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Manrope:wght@400..800&display=block');
+
+:root{
+  --cream:#FBEDEA; --paper:#FFFFFF; --sand:#F6DCD7; --ink:#12162B; --muted:#5A5F74; --blush:#F7CFC8;
+  --terra:#2C44D8; --terra-dk:#1B2B9E; --line:#E2E3EA; --sage:#12162B;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:#fff;font-family:'Manrope',system-ui,sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased}
+a{cursor:pointer}
+img{max-width:100%}
+.serif{font-family:'Bricolage Grotesque',sans-serif}
+
+/* Shared site parts */
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
+.logo .word{font-family:'Bricolage Grotesque',sans-serif;font-style:italic;font-weight:500;font-size:30px;letter-spacing:-.02em;line-height:1}
+.logo .sub{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--terra);color:#fff;font-weight:600;font-size:15px;padding:14px 22px;border-radius:999px;text-decoration:none;white-space:nowrap}
+.btn svg{width:16px;height:16px}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+.btn.light{background:#fff;color:var(--terra-dk)}
+.eyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--terra)}
+.photo{background-size:cover;background-position:center;border-radius:6px}
+.price-row{display:flex;align-items:baseline;gap:10px;font-size:16px;padding:9px 0}
+.price-row .lead{flex:1;border-bottom:1.5px dotted #C4C8D6;transform:translateY(-4px)}
+.price-row b{font-weight:600;font-variant-numeric:tabular-nums}
+.ph{color:var(--muted);background:#EEF0FC;border:1px dashed #AEB8EE;border-radius:4px;padding:1px 7px;font-size:.92em;white-space:nowrap}
+.hours-row{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid var(--line);font-size:15.5px}
+.hours-row:last-child{border-bottom:0}
+.hours-row span:last-child{font-variant-numeric:tabular-nums}
+.closed{color:var(--muted)}
+.map{position:relative;border-radius:6px;overflow:hidden;background:#ECEEF3}
+.map svg{position:absolute;inset:0;width:100%;height:100%}
+.pin{position:absolute;left:50%;top:46%;transform:translate(-50%,-100%);width:34px;height:44px}
+
+/* Gouttière fluide : contenu centré sur grand écran */
+:root{--gut:max(72px,calc((100vw - 1296px) / 2))}
