@@ -35,7 +35,7 @@
 .dk .hero .side .vt{font-size:44px;color:var(--sumi)}
 .dk .hero .side .cap{writing-mode:vertical-rl}
 .dk .hero .txt{padding:110px 70px 60px 80px;display:flex;flex-direction:column}
-.dk .hero h1{font-family:'Shippori Mincho';font-weight:500;font-size:68px;line-height:1.28;letter-spacing:.01em;margin-top:28px}
+.dk .hero h1{font-family:'Shippori Mincho';font-weight:500;font-size:60px;line-height:1.28;letter-spacing:.01em;margin-top:28px}
 .dk .hero p.lede{color:#4B4844;font-weight:300;font-size:18px;max-width:470px;margin-top:30px}
 .dk .hero .ctas{display:flex;gap:14px;margin-top:44px}
 .dk .hero .facts{margin-top:auto;display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}
@@ -56,6 +56,12 @@
 .dk .svc .row{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:26px;border-top:1px solid #3A3936}
 .dk .svc .btn{background:#EDEBE6;color:var(--sumi);padding:13px 22px}
 .dk .svc .date{font-size:14px;color:#D6D2CB}
+.dk .grid2{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px;align-items:center}
+.dk .bk{display:grid;grid-template-columns:1.25fr .85fr 1fr auto;border:1px solid #3A3936;align-items:center}
+.dk .bk div{align-self:stretch;padding:22px 22px;border-right:1px solid #3A3936}
+.dk .bk b{display:block;white-space:nowrap;font-family:'Shippori Mincho';font-weight:500;font-size:28px;line-height:1.2;color:#EDEBE6;margin-top:4px}
+.dk .bk small{color:#A7A39C;font-size:13px}
+.dk .bk .btn{background:#EDEBE6;color:var(--sumi);margin:0 24px}
 .dk .course-wrap{display:grid;grid-template-columns:1fr 1fr;gap:80px}
 .dk .phase{border-top:1px solid var(--sumi);padding-top:20px;margin-bottom:46px}
 .dk .phase .hd{display:flex;justify-content:space-between;align-items:baseline}
@@ -203,36 +209,40 @@ html,body{background:var(--bg)}
 
 <header>
   <div class="logo"><span class="hanko">檜</span><div><b>HINOKI</b><small>Comptoir omakase · Nantes</small></div></div>
-  <nav><a href="#services">Les services</a><a href="#omakase">L’omakase</a><a href="#comptoir">Le comptoir</a><a href="#chef">Le chef</a><a href="#infos">Infos</a></nav>
-  <span class="btn k" style="padding:13px 24px">Réserver un service</span>
+  <nav><a href="#reservation">Réservation</a><a href="#omakase">L’omakase</a><a href="#comptoir">Le comptoir</a><a href="#chef">Le chef</a><a href="#infos">Infos</a></nav>
+  <span class="btn k" style="padding:13px 24px">Réserver</span>
 </header>
 
 <section class="hero">
   <div class="side"><span class="vt">おまかせ</span><span class="cap">Quartier Graslin</span></div>
   <div class="txt">
-    <span class="cap">Comptoir à sushis · huit places</span>
-    <h1>Douze pièces,<br>un comptoir,<br>deux services par soir.</h1>
-    <p class="lede">Le chef compose l’omakase devant vous, pièce par pièce, avec le poisson du jour. On s’assoit, on regarde, on laisse faire.</p>
-    <div class="ctas"><span class="btn k">Réserver un service</span><span class="btn l">Découvrir l’omakase</span></div>
+    <span class="cap">Restaurant · comptoir à sushis · 8 places</span>
+    <h1>Sushis omakase<br>à Nantes</h1>
+    <p class="lede">Menu dégustation de 12 pièces préparé par le chef devant vous, au comptoir. Poisson frais livré chaque jour.</p>
+    <div class="ctas"><span class="btn k">Réserver</span><span class="btn l">Voir le menu</span></div>
     <div class="facts">
-      <div><b>19:00</b><span>Premier service</span></div>
-      <div><b>21:15</b><span>Second service</span></div>
+      <div><b>85 €</b><span>Menu omakase</span></div>
+      <div><b>12</b><span>Pièces</span></div>
       <div><b>8</b><span>Places au comptoir</span></div>
     </div>
   </div>
   <div class="pic"><span class="tag">Nigiri sur planche de hinoki</span></div>
 </section>
 
-<section id="services" class="services">
-  <div class="grid">
-    <div class="intro"><span class="cap">Réservation</span><h2>Choisissez<br>votre service.</h2><p>Tout le comptoir commence en même temps. Réservation via <span class="ph" style="color:#B9B5AE">[outil de réservation]</span>.</p></div>
-    <div class="svc"><span class="cap">Premier service</span><b>19:00</b><p>Arrivée 10 minutes avant. Environ 1 h 45.</p><div class="row"><span class="date">Jeudi 30 octobre</span><span class="btn">Réserver</span></div></div>
-    <div class="svc"><span class="cap">Second service</span><b>21:15</b><p>Arrivée 10 minutes avant. Environ 1 h 45.</p><div class="row"><span class="date">Jeudi 30 octobre</span><span class="btn">Réserver</span></div></div>
+<section id="reservation" class="services">
+  <div class="grid2">
+    <div class="intro"><span class="cap">Réservation</span><h2>Réservez en ligne.</h2><p>Choisissez la date, le nombre de personnes et l’horaire. Réservation via <span class="ph" style="color:#B9B5AE">[outil de réservation]</span>.</p></div>
+    <div class="bk">
+      <div><span class="cap">Date</span><b>Jeu. 30 oct.</b></div>
+      <div><span class="cap">Personnes</span><b>2</b></div>
+      <div><span class="cap">Horaire</span><b>19:00</b><small>ou 21:15</small></div>
+      <span class="btn">Réserver</span>
+    </div>
   </div>
 </section>
 
 <section id="omakase" class="sec">
-  <div class="sh"><div class="num">一 — L’omakase</div><h2>Un menu unique,<br>décidé chaque matin.</h2><p>Le déroulé change selon la marée. Voici un exemple de soirée.</p></div>
+  <div class="sh"><div class="num">一 — L’omakase</div><h2>Le menu<br>omakase.</h2><p>Le menu change selon les arrivages. Voici un exemple.</p></div>
   <div class="course-wrap">
     <div>
       <div class="phase"><div class="hd"><h3>Zensai<small>Pour commencer</small></h3><span class="ct">2 bouchées</span></div>
@@ -251,8 +261,8 @@ html,body{background:var(--bg)}
 <section id="comptoir" class="comptoir">
   <div class="pic"></div>
   <div class="txt"><span class="vt">檜の木</span><span class="cap">二 — Le comptoir</span>
-    <h2>Huit places<br>face au chef.</h2>
-    <p>Un comptoir en bois de hinoki, une seule rangée, aucune table. Chaque pièce se mange dès qu’elle est posée.</p>
+    <h2>Le comptoir.</h2>
+    <p>8 places au comptoir en bois de hinoki, face au chef. Pas de tables en salle.</p>
     <div class="rules">
       <div><i>・</i><span>Arrivez 10 minutes avant le service</span></div>
       <div><i>・</i><span>Annulation possible jusqu’à 24 h avant</span></div>
@@ -263,8 +273,8 @@ html,body{background:var(--bg)}
 <section id="chef" class="sec">
   <div class="chef">
     <div class="pic"></div>
-    <div><span class="cap">三 — Le chef</span><h2>Derrière le comptoir.</h2>
-      <p>Il découpe, façonne et pose chaque pièce devant vous, en expliquant le poisson du jour.</p>
+    <div><span class="cap">三 — Le chef</span><h2>Le chef.</h2>
+      <p>Il prépare chaque pièce devant vous et présente le poisson du jour.</p>
       <div class="duo">
         <div><b>Ren</b><span class="cap">Itamae, chef</span><p>Le riz, la découpe, le rythme du service.</p></div>
         <div><b>Mio</b><span class="cap">Salle et sakés</span><p>Elle accueille et propose les accords.</p></div>
@@ -274,7 +284,7 @@ html,body{background:var(--bg)}
 </section>
 
 <section class="sec gal">
-  <div class="sh"><div class="num">四 — Au comptoir</div><h2>Quelques pièces.</h2><p>Photos d’illustration. Sur le site final : les pièces du chef.</p></div>
+  <div class="sh"><div class="num">四 — Au comptoir</div><h2>Nos sushis.</h2><p>Photos d’illustration. Sur le site final : les pièces du chef.</p></div>
   <div class="gg">
     <figure><div class="im" style="background-image:url(img/s-saumon.jpg)"></div><figcaption><b>Saumon</b><span>Sel fumé</span></figcaption></figure>
     <figure><div class="im" style="background-image:url(img/s-thon.jpg)"></div><figcaption><b>Thon akami</b><span>Mariné au shoyu</span></figcaption></figure>
@@ -309,9 +319,9 @@ html,body{background:var(--bg)}
 
 <section class="final">
   <span class="hanko" style="width:56px;height:56px;font-size:30px">檜</span>
-  <h2>Une place au comptoir ?</h2>
-  <p>Deux services par soir, du mercredi au samedi.</p>
-  <span class="btn k">Réserver un service</span>
+  <h2>Réservez votre place.</h2>
+  <p>Du mercredi au samedi à 19:00 et 21:15, le dimanche à 12:30.</p>
+  <span class="btn k">Réserver</span>
 </section>
 <footer><span>© Hinoki · Mentions légales · Confidentialité</span><span>[Adresse], 44000 Nantes · [02 00 00 00 00]</span><span>Maquette — restaurant fictif · informations illustratives</span></footer>
 
@@ -320,18 +330,18 @@ html,body{background:var(--bg)}
 
 <header id="mb-head"><span style="display:flex;align-items:center;gap:10px"><span class="hanko">檜</span><span style="font-family:Shippori Mincho;font-size:22px;letter-spacing:.12em">HINOKI</span></span><div class="r"><span class="btn a">Réserver</span><span class="burger"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 9h16M4 15h16"/></svg></span></div></header>
 <section class="hero" id="mb-hero">
-  <div class="p"><div class="cap">Comptoir omakase · Nantes</div><h1>Douze pièces, un comptoir, deux services par soir.</h1><p>Le chef compose l’omakase devant vous, avec le poisson du jour.</p></div>
+  <div class="p"><div class="cap">Restaurant · comptoir à sushis</div><h1>Sushis omakase à Nantes</h1><p>Menu dégustation de 12 pièces, préparé par le chef devant vous au comptoir.</p></div>
   <div class="img" style="background-image:url(img/s-hero.jpg)"></div>
-  <div class="book"><div class="cap">Choisir un service · jeudi 30 octobre</div><div class="svc"><div><span class="cap">Premier service</span><b>19:00</b></div><span class="btn a">Réserver</span></div><div class="svc"><div><span class="cap">Second service</span><b>21:15</b></div><span class="btn a">Réserver</span></div><p class="note">Via <span class="ph">[outil de réservation]</span> · 8 places au comptoir</p></div>
+  <div class="book"><div class="cap">Réserver une place au comptoir</div><div class="f"><div><span class="cap">Date</span><b>Jeu. 30</b></div><div><span class="cap">Pers.</span><b>2</b></div><div><span class="cap">Horaire</span><b>19:00</b></div></div><span class="btn a">Réserver</span><p class="note">Via <span class="ph">[outil de réservation]</span> · 19:00 ou 21:15 · 8 places</p></div>
 </section>
-<section class="blk" id="mb-sig"><div class="cap">一 — L’omakase</div><h2>Un menu unique, décidé chaque matin.</h2><div class="ph2"><b>Zensai</b><span class="cap">2 bouchées</span></div><div class="row"><div><b>Chawanmushi, bouillon dashi</b></div><span class="pr">01</span></div><div class="row"><div><b>Daikon mariné, sésame</b></div><span class="pr">02</span></div><div class="ph2"><b>Nigiri</b><span class="cap">9 pièces</span></div><div class="row"><div><b>Daurade, zeste de yuzu</b></div><span class="pr">03</span></div><div class="row"><div><b>Saumon, sel fumé</b></div><span class="pr">04</span></div><div class="row"><div><b>Thon akami mariné</b></div><span class="pr">05</span></div><div class="row"><div><b>…et six autres pièces</b></div><span class="pr">06–11</span></div><div class="ph2"><b>Owan</b><span class="cap">1 bol</span></div><div class="row"><div><b>Soupe miso, coquillages</b></div><span class="pr">12</span></div><div class="row" style="margin-top:18px;border-top:1px solid #161615"><div><b>L’omakase · accord de trois sakés + 38 €</b></div><span class="pr">85 €</span></div><p class="illu">Menu et prix donnés à titre d’exemple.</p></section>
-<section id="mb-rail" style="padding:44px 0 44px;"><div class="p"><div class="cap">四 — Au comptoir</div><h2>Quelques pièces.</h2></div><div class="rail" data-rail><div class="c"><div class="im" style="background-image:url(img/s-saumon.jpg)"></div><h3>Saumon</h3><p>Sel fumé.</p></div><div class="c"><div class="im" style="background-image:url(img/s-thon.jpg)"></div><h3>Thon akami</h3><p>Mariné au shoyu.</p></div><div class="c"><div class="im" style="background-image:url(img/s-planche.jpg)"></div><h3>Thon et gingembre</h3><p>Sur planche.</p></div></div><div class="dots" data-dots><i class="on"></i><i></i><i></i></div></section>
-<section class="blk" id="mb-team" style="padding-top:44px"><div class="cap">三 — Le chef</div><h2>Derrière le comptoir.</h2><div style="margin-top:10px"><div class="mem"><div class="av" style="background-image:url(img/s-chef.jpg)"></div><div><h3>Ren</h3><span class="cap" style="color:var(--accent)">Itamae, chef</span><p>Le riz, la découpe, le rythme.</p></div></div><div class="mem"><div class="av" style="background-image:url(img/s-mains.jpg)"></div><div><h3>Mio</h3><span class="cap" style="color:var(--accent)">Salle et sakés</span><p>L’accueil et les accords.</p></div></div></div><p class="illu">Prénoms et portraits illustratifs.</p></section>
-<section class="blk" id="mb-infos" style="padding-top:20px"><div class="cap">Infos pratiques</div><h2>Venir au comptoir.</h2><div class="today"><div><b>Ce soir, jeudi</b><span>19:00 · 21:15</span></div><em>Ouvert</em></div><div style="margin-top:6px"><div class="hrow"><span>Mer → sam</span><span>19:00 · 21:15</span></div><div class="hrow"><span>Dimanche</span><span>12:30</span></div><div class="hrow"><span>Lun, mar</span><span>Fermé</span></div></div>
+<section class="blk" id="mb-sig"><div class="cap">一 — L’omakase</div><h2>Le menu omakase.</h2><div class="ph2"><b>Zensai</b><span class="cap">2 bouchées</span></div><div class="row"><div><b>Chawanmushi, bouillon dashi</b></div><span class="pr">01</span></div><div class="row"><div><b>Daikon mariné, sésame</b></div><span class="pr">02</span></div><div class="ph2"><b>Nigiri</b><span class="cap">9 pièces</span></div><div class="row"><div><b>Daurade, zeste de yuzu</b></div><span class="pr">03</span></div><div class="row"><div><b>Saumon, sel fumé</b></div><span class="pr">04</span></div><div class="row"><div><b>Thon akami mariné</b></div><span class="pr">05</span></div><div class="row"><div><b>…et six autres pièces</b></div><span class="pr">06–11</span></div><div class="ph2"><b>Owan</b><span class="cap">1 bol</span></div><div class="row"><div><b>Soupe miso, coquillages</b></div><span class="pr">12</span></div><div class="row" style="margin-top:18px;border-top:1px solid #161615"><div><b>L’omakase · accord de trois sakés + 38 €</b></div><span class="pr">85 €</span></div><p class="illu">Menu et prix donnés à titre d’exemple.</p></section>
+<section id="mb-rail" style="padding:44px 0 44px;"><div class="p"><div class="cap">四 — Au comptoir</div><h2>Nos sushis.</h2></div><div class="rail" data-rail><div class="c"><div class="im" style="background-image:url(img/s-saumon.jpg)"></div><h3>Saumon</h3><p>Sel fumé.</p></div><div class="c"><div class="im" style="background-image:url(img/s-thon.jpg)"></div><h3>Thon akami</h3><p>Mariné au shoyu.</p></div><div class="c"><div class="im" style="background-image:url(img/s-planche.jpg)"></div><h3>Thon et gingembre</h3><p>Sur planche.</p></div></div><div class="dots" data-dots><i class="on"></i><i></i><i></i></div></section>
+<section class="blk" id="mb-team" style="padding-top:44px"><div class="cap">三 — Le chef</div><h2>Le chef.</h2><div style="margin-top:10px"><div class="mem"><div class="av" style="background-image:url(img/s-chef.jpg)"></div><div><h3>Ren</h3><span class="cap" style="color:var(--accent)">Itamae, chef</span><p>Le riz, la découpe, le rythme.</p></div></div><div class="mem"><div class="av" style="background-image:url(img/s-mains.jpg)"></div><div><h3>Mio</h3><span class="cap" style="color:var(--accent)">Salle et sakés</span><p>L’accueil et les accords.</p></div></div></div><p class="illu">Prénoms et portraits illustratifs.</p></section>
+<section class="blk" id="mb-infos" style="padding-top:20px"><div class="cap">Infos pratiques</div><h2>Horaires et accès.</h2><div class="today"><div><b>Ce soir, jeudi</b><span>19:00 · 21:15</span></div><em>Ouvert</em></div><div style="margin-top:6px"><div class="hrow"><span>Mer → sam</span><span>19:00 · 21:15</span></div><div class="hrow"><span>Dimanche</span><span>12:30</span></div><div class="hrow"><span>Lun, mar</span><span>Fermé</span></div></div>
 <div class="map"><svg viewBox="0 0 390 220" preserveAspectRatio="xMidYMid slice"><rect width="390" height="220" fill="#FAFAF8"/><g stroke="#E6E3DD"><path d="M0 55H390M0 110H390M0 165H390M78 0V220M156 0V220M234 0V220M312 0V220"/></g><path d="M-20 200C100 180 220 210 410 170" stroke="#E6E3DD" stroke-width="26" fill="none"/><path d="M50 -10L160 230M270 -10L220 230" stroke="#D6D2CB" stroke-width="2" fill="none"/><rect x="176" y="92" width="26" height="26" fill="#B23A26"/><text x="189" y="111" fill="#fff" font-family="Shippori Mincho" font-size="15" text-anchor="middle">檜</text><text x="210" y="110" fill="#161615" font-family="Shippori Mincho" font-size="16">Hinoki</text></svg></div><p style="margin-top:14px;font-size:14.5px">Hinoki · <span class="ph">[Adresse], 44000 Nantes</span></p><div class="two"><span class="btn a">Itinéraire</span><span class="btn o">Appeler</span></div><p class="illu">Arrivez 10 minutes avant le service · annulation jusqu’à 24 h avant</p></section>
-<section class="final" id="mb-final"><span class="hanko" style="width:46px;height:46px;font-size:25px">檜</span><h2 style="margin-top:18px">Une place au comptoir ?</h2><p>Deux services par soir, du mercredi au samedi.</p><span class="btn a">Réserver un service</span></section>
-<footer id="mb-foot"><span style="display:flex;align-items:center;gap:10px"><span class="hanko">檜</span><span style="font-family:Shippori Mincho;font-size:22px;letter-spacing:.12em">HINOKI</span></span><p style="margin-top:10px">Comptoir omakase, quartier Graslin, Nantes.</p><div class="links"><span>Les services</span><span>L’omakase</span><span>Le comptoir</span><span>Le chef</span><span>Infos</span><span>Mentions légales</span></div><div class="sm"><span>[02 00 00 00 00]</span><span>Maquette — restaurant fictif</span></div></footer>
-<div class="sticky" id="sticky"><span class="call"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></span><span class="btn a">Réserver un service</span></div>
+<section class="final" id="mb-final"><span class="hanko" style="width:46px;height:46px;font-size:25px">檜</span><h2 style="margin-top:18px">Réservez votre place.</h2><p>Du mercredi au samedi à 19:00 et 21:15, le dimanche à 12:30.</p><span class="btn a">Réserver</span></section>
+<footer id="mb-foot"><span style="display:flex;align-items:center;gap:10px"><span class="hanko">檜</span><span style="font-family:Shippori Mincho;font-size:22px;letter-spacing:.12em">HINOKI</span></span><p style="margin-top:10px">Comptoir omakase, quartier Graslin, Nantes.</p><div class="links"><span>Réservation</span><span>L’omakase</span><span>Le comptoir</span><span>Le chef</span><span>Infos</span><span>Mentions légales</span></div><div class="sm"><span>[02 00 00 00 00]</span><span>Maquette — restaurant fictif</span></div></footer>
+<div class="sticky" id="sticky"><span class="call"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></span><span class="btn a">Réserver</span></div>
 
 </div>
 <script>
