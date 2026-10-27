@@ -47,12 +47,12 @@
     .switch button{padding:8px 6px}
     .switch button b{font-size:13.5px}
   }
-  @media (max-width:640px){.sector a{padding:5px 8px;font-size:11.5px}}
+  @media (max-width:640px){.sector a{padding:5px 8px;font-size:11.5px;flex:none}.brand{justify-content:flex-start!important;min-width:0}.sector{max-width:100%;overflow-x:auto;scrollbar-width:none}.sector::-webkit-scrollbar{display:none}}
 </style>
 </head>
 <body>
 <div class="bar">
-  <div class="brand"><b>Maquettes<i>.</i></b><nav class="sector" aria-label="Secteur"><a class="on" href="./">Salons</a><a href="restaurant/">Restaurants</a><a href="mariage/">Mariage</a><a href="hotes/">Maisons d’hôtes</a></nav></div>
+  <div class="brand"><b>Maquettes<i>.</i></b><nav class="sector" aria-label="Secteur"><a class="on" href="./">Salons</a><a href="restaurant/">Restaurants</a><a href="mariage/">Mariage</a><a href="hotes/">Maisons d’hôtes</a><a href="garage/">Garages</a></nav></div>
   <div class="switch" role="group" aria-label="Choisir la formule" data-on="essentiel">
     <span class="pill" aria-hidden="true"></span>
     <button data-id="essentiel" aria-pressed="true"><b>Essentiel</b><span>690 € HT</span></button>
@@ -109,6 +109,9 @@
   });
 
   show(location.hash.slice(1));
+
+  // secteur actif visible dans le sélecteur défilant (mobile)
+  document.querySelector('.sector a.on').scrollIntoView({inline: 'center', block: 'nearest'});
 </script>
 </body>
 </html>

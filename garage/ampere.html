@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Garage Ampère — hybride et électrique, Toulouse (maquette)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400..700&family=Inter:wght@400..600&display=swap">
+<style>
+/* ===== version ordinateur (maquette 1440 px, mise à l'échelle) ===== */
+:root{--teal:#0F4C4A;--teal-dk:#0A3433;--mint:#E8F2F0;--paper:#FFFFFF;--ink:#122221;--mut:#55655F;--line:#DCE6E3;--lime:#8FB339}
+*{box-sizing:border-box;margin:0;padding:0}
+.dk{width:1440px;position:relative;background:var(--paper);color:var(--ink);font-family:'Inter',sans-serif;font-size:16.5px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.dk .cap{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--teal)}
+.dk h2{font-family:'Outfit',sans-serif;font-weight:600;font-size:50px;line-height:1.05;letter-spacing:-.025em;color:var(--teal-dk)}
+.dk .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-weight:600;font-size:15px;padding:16px 26px;border-radius:999px;white-space:nowrap}
+.dk .btn.t{background:var(--teal);color:#fff}
+.dk .btn.w{background:#fff;color:var(--teal-dk)}
+.dk .btn.l{border:1.5px solid currentColor;padding:14.5px 24.5px}
+.dk .ph{border-bottom:1px dashed #9DB3AE;color:var(--mut);white-space:nowrap}
+.dk .sh{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-bottom:46px}
+.dk .sh h2{margin-top:12px}
+.dk .sh p{max-width:400px;color:var(--mut)}
+.dk header{display:flex;align-items:center;justify-content:space-between;padding:22px 80px}
+.dk .logo{display:flex;align-items:center;gap:12px}
+.dk .logo .mk{width:40px;height:40px;border-radius:12px;background:var(--teal);display:grid;place-items:center}
+.dk .logo .mk svg{width:22px;height:22px}
+.dk .logo b{font-family:'Outfit';font-weight:700;font-size:24px;letter-spacing:-.02em;display:block;line-height:1}
+.dk .logo small{font-size:12.5px;color:var(--mut)}
+.dk nav{display:flex;gap:32px;font-size:15px;font-weight:500}
+.dk .hero{margin:0 24px;border-radius:28px;background:var(--mint);display:grid;grid-template-columns:1fr 1fr;overflow:hidden;min-height:660px}
+.dk .hero .txt{padding:80px 56px 56px 56px}
+.dk .hero h1{font-family:'Outfit';font-weight:600;font-size:62px;line-height:1.03;letter-spacing:-.03em;color:var(--teal-dk);margin:18px 0 20px}
+.dk .hero p{font-size:19px;color:#2F423F}
+.dk .hero .ctas{display:flex;gap:12px;margin-top:32px}
+.dk .hero .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:36px}
+.dk .hero .chips span{background:#fff;border-radius:999px;padding:8px 14px;font-size:14px;font-weight:500;color:var(--teal-dk)}
+.dk .hero .pic{background:url(img/e-capot.jpg) center/cover}
+.dk .sel{padding:100px 80px 40px}
+.dk .sel .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.dk .op{border:1.5px solid var(--line);border-radius:18px;padding:24px;display:flex;gap:16px;align-items:flex-start}
+.dk .op.on{border-color:var(--teal);background:var(--mint)}
+.dk .op .ic{width:46px;height:46px;border-radius:12px;background:#fff;border:1px solid var(--line);display:grid;place-items:center;flex:none}
+.dk .op .ic svg{width:24px;height:24px;color:var(--teal)}
+.dk .op b{display:block;font-family:'Outfit';font-weight:600;font-size:21px;color:var(--teal-dk)}
+.dk .op span{font-size:14.5px;color:var(--mut)}
+.dk .svc{padding:40px 80px 110px}
+.dk .tab{border:1px solid var(--line);border-radius:20px;overflow:hidden}
+.dk .tab .hd,.dk .tab .r{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:20px;align-items:center;padding:18px 26px}
+.dk .tab .hd{background:var(--teal-dk);color:#CFE3DF;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:600}
+.dk .tab .r{border-top:1px solid var(--line);font-size:15.5px}
+.dk .tab .r b{display:block;font-family:'Outfit';font-weight:600;font-size:19px;color:var(--teal-dk)}
+.dk .tab .r small{color:var(--mut);font-size:13.5px}
+.dk .tab .r .p{font-family:'Outfit';font-weight:600;font-size:19px}
+.dk .tab .r .na{color:#9AA8A4}
+.dk .illu{margin-top:14px;font-size:13.5px;color:var(--mut)}
+.dk .bat{display:grid;grid-template-columns:1fr 1fr;gap:0;background:var(--teal-dk);color:#fff}
+.dk .bat .txt{padding:96px 80px}
+.dk .bat .cap{color:#BFE0A4}
+.dk .bat h2{color:#fff;margin:12px 0 18px}
+.dk .bat p{color:#C3D6D2}
+.dk .gauge{margin-top:30px;background:var(--teal);border-radius:18px;padding:22px 24px}
+.dk .gauge .hd{display:flex;justify-content:space-between;font-size:14px;color:#CFE3DF}
+.dk .gauge .bar{height:16px;border-radius:999px;background:#0A3433;margin:14px 0 10px;overflow:hidden}
+.dk .gauge .bar i{display:block;height:100%;width:91%;border-radius:999px;background:linear-gradient(90deg,#6E9A2B,#8FB339)}
+.dk .gauge .row{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px}
+.dk .gauge .row div{background:var(--teal-dk);border-radius:12px;padding:12px 14px}
+.dk .gauge .row span{display:block;font-size:12.5px;color:#9FC1BB}
+.dk .gauge .row b{font-family:'Outfit';font-weight:600;font-size:22px}
+.dk .gauge small{display:block;margin-top:12px;font-size:12.5px;color:#9FC1BB}
+.dk .bat .pic{background:url(img/e-batterie.jpg) center/cover}
+.dk .why{padding:110px 80px}
+.dk .wg{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.dk .wc{background:var(--mint);border-radius:18px;padding:26px}
+.dk .wc b{display:block;font-family:'Outfit';font-weight:600;font-size:21px;color:var(--teal-dk);margin-top:14px}
+.dk .wc p{font-size:15px;color:var(--mut);margin-top:6px}
+.dk .wc svg{width:30px;height:30px;color:var(--teal)}
+.dk .gal{padding:0 80px 110px}
+.dk .gg{display:grid;grid-template-columns:1.2fr 1fr 1fr;grid-template-rows:260px 260px;gap:12px}
+.dk .gg div{border-radius:18px;background-size:cover;background-position:center}
+.dk .gg .t{grid-row:span 2}
+.dk .infos{margin:0 24px 24px;border-radius:28px;background:var(--mint);padding:90px 56px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:48px}
+.dk .infos h3{font-family:'Outfit';font-weight:600;font-size:23px;color:var(--teal-dk);margin-bottom:12px}
+.dk .hrow{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--line);font-size:15.5px}
+.dk footer{padding:26px 80px 34px;display:flex;justify-content:space-between;font-size:13.5px;color:var(--mut)}
+html{scroll-behavior:smooth}
+body{margin:0;background:#FFFFFF;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.dk{overflow:hidden}
+/* ===== version mobile ===== */
+:root{--bg:#FFFFFF;--fg:#122221;--soft:#2F423F;--mut:#55655F;--line:#DCE6E3;--accent:#0F4C4A;--onaccent:#fff;--panel:#E8F2F0;--btnbg:#0F4C4A;--btnfg:#fff;--stickybg:rgba(255,255,255,.97);--disp:"Outfit",sans-serif;--dw:600;--body:"Inter",sans-serif;--emstyle:normal;--rad:999px;--avr:12px}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bg)}
+.mb{color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.mb .p{padding:0 20px}
+.mb .cap{font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--mut);font-weight:500}
+.mb h2{font-family:var(--disp);font-weight:var(--dw);font-size:38px;line-height:1.08;margin-top:12px}
+.mb h2 em{font-style:var(--emstyle);color:var(--accent)}
+.mb .btn{display:flex;align-items:center;justify-content:center;gap:10px;font-weight:500;font-size:14px;letter-spacing:.06em;padding:15px 18px;white-space:nowrap;border-radius:var(--rad)}
+.mb .btn.a{background:var(--btnbg);color:var(--btnfg)}
+.mb .btn.o{border:1px solid var(--fg);padding:14px 17px}
+.mb .ph{border-bottom:1px dashed var(--mut);color:var(--mut);white-space:nowrap}
+.mb section{position:relative}
+.mb header{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid var(--line)}
+.mb header .r{display:flex;gap:10px;align-items:center}
+.mb header .btn{padding:10px 14px;font-size:12.5px}
+.mb .burger{width:40px;height:40px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center}
+.mb .burger svg{width:18px;height:18px}
+.mb .hero{padding:26px 0 0}
+.mb .hero h1{font-family:var(--disp);font-weight:var(--dw);font-size:46px;line-height:1.05;margin:14px 0 14px}
+.mb .hero h1 em{font-style:var(--emstyle);color:var(--accent)}
+.mb .hero p{color:var(--soft);font-size:16px}
+.mb .hero .img{height:330px;margin-top:24px;background-size:cover;background-position:center}
+.mb .book{margin:0 20px;border:1px solid var(--line);padding:16px;background:var(--panel);transform:translateY(-36px)}
+.mb .book .f{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:6px;margin:10px 0 12px}
+.mb .book .f div{border:1px solid var(--line);padding:7px 10px}
+.mb .book .f b{display:block;font-family:var(--disp);font-weight:var(--dw);font-size:18px}
+.mb .book .note{font-size:12px;color:var(--mut);margin-top:10px}
+.mb .blk{padding:14px 20px 44px}
+.mb .row{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:13px 0;border-bottom:1px solid var(--line)}
+.mb .row b{display:block;font-weight:500;font-size:15.5px;line-height:1.3}
+.mb .row small{display:block;color:var(--mut);font-size:13px}
+.mb .row .pr{font-family:var(--disp);font-size:18px;white-space:nowrap}
+.mb .illu{font-size:12px;color:var(--mut);margin-top:12px}
+.mb .rail{display:flex;gap:12px;overflow:hidden;padding:22px 20px 0}
+.mb .rail .c{flex:none;width:240px}
+.mb .rail .c .im{height:260px;background-size:cover;background-position:center}
+.mb .rail .c h3{font-family:var(--disp);font-weight:var(--dw);font-size:24px;margin-top:12px;line-height:1.1}
+.mb .rail .c p{font-size:13.5px;color:var(--mut);margin-top:4px}
+.mb .dots{display:flex;gap:6px;justify-content:center;margin-top:20px}
+.mb .dots i{width:6px;height:6px;border-radius:50%;background:var(--line)}
+.mb .dots i.on{width:20px;border-radius:6px;background:var(--accent)}
+.mb .mem{display:grid;grid-template-columns:72px 1fr;gap:14px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line)}
+.mb .mem .av{width:72px;height:72px;background-size:cover;background-position:center 30%;border-radius:var(--avr)}
+.mb .mem h3{font-family:var(--disp);font-weight:var(--dw);font-size:22px;line-height:1.1}
+.mb .mem p{font-size:13.5px;color:var(--mut)}
+.mb .today{margin-top:18px;border:1px solid var(--accent);padding:14px 16px;display:flex;justify-content:space-between;align-items:center}
+.mb .today b{font-family:var(--disp);font-weight:var(--dw);font-size:20px;display:block;line-height:1.1}
+.mb .today span{font-size:13px;color:var(--soft)}
+.mb .today em{font-style:normal;background:var(--accent);color:var(--onaccent);font-size:11px;font-weight:600;letter-spacing:.06em;padding:4px 9px}
+.mb .hrow{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--line);font-size:14.5px}
+.mb .map{margin-top:20px;height:220px;border:1px solid var(--line);overflow:hidden}
+.mb .map svg{width:100%;height:100%}
+.mb .two{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px}
+.mb .final{padding:60px 20px 54px;text-align:center;border-top:1px solid var(--line)}
+.mb .final h2{font-size:40px}
+.mb .final p{color:var(--soft);margin:12px 0 22px}
+.mb footer{border-top:1px solid var(--line);padding:30px 20px 120px;color:var(--mut);font-size:13.5px}
+.mb footer .links{display:grid;grid-template-columns:1fr 1fr;gap:6px 14px;margin:18px 0;color:var(--fg)}
+.mb footer .sm{font-size:11.5px;border-top:1px solid var(--line);padding-top:12px;display:flex;justify-content:space-between}
+.mb .sticky{width:390px;padding:12px 16px 26px;background:var(--stickybg);border-top:1px solid var(--line);display:grid;grid-template-columns:52px 1fr;gap:10px}
+.mb .sticky .call{width:52px;height:52px;border:1px solid var(--fg);border-radius:50%;display:grid;place-items:center}
+.mb .sticky .call svg{width:20px;height:20px}
+.mb .rm{display:grid;grid-template-columns:84px 1fr auto;gap:14px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}
+.mb .rm .th{width:84px;height:68px;background-size:cover;background-position:center;border-radius:var(--avr)}
+.mb .rm b{display:block;font-family:var(--disp);font-weight:var(--dw);font-size:18px;line-height:1.15}
+.mb .rm small{display:block;font-size:13px;color:var(--mut)}
+.mb .rm .pr{font-family:var(--disp);font-weight:var(--dw);font-size:16px;white-space:nowrap;color:var(--accent)}
+.mb .today em{font-size:0}
+.mb .today em::after{content:"Ouvert";font-size:11px}
+.mb h2,.mb .hero h1{letter-spacing:-.025em}
+.mb #m-rail{background:#E8F2F0}
+.mb .mot{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin:14px 0 6px}
+.mb .mot span{text-align:center;border:1.5px solid var(--line);border-radius:12px;padding:9px 4px;font-size:12.5px;font-weight:600}
+.mb .mot span.on{border-color:#0F4C4A;background:#E8F2F0}
+.mb .gauge{background:#0A3433;color:#fff;border-radius:16px;padding:16px;margin-top:22px}
+.mb .gauge .bar{height:12px;border-radius:9px;background:#0F4C4A;margin:10px 0;overflow:hidden}
+.mb .gauge .bar i{display:block;height:100%;width:91%;background:#8FB339}
+.mb .gauge .r{display:flex;justify-content:space-between;font-size:13px;color:#9FC1BB}
+.mb .gauge b{font-family:Outfit;font-size:20px;color:#fff}
+
+.mb .rail{overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-right:20px}
+.mb .rail::-webkit-scrollbar{display:none}
+.mb .rail .c{scroll-snap-align:start;scroll-margin-left:20px}
+.mb .sticky{position:fixed;left:0;right:0;bottom:0;width:auto;z-index:20;padding-bottom:max(16px,env(safe-area-inset-bottom))}
+
+.mb{display:none}
+@media (max-width:760px){.dk{display:none}.mb{display:block}}
+</style>
+</head>
+<body>
+<div class="dk">
+
+<header>
+  <div class="logo"><span class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round"><path d="M13 3 5 13h6l-1 8 8-10h-6z"/></svg></span><div><b>Garage Ampère</b><small>Hybrides et électriques · Toulouse</small></div></div>
+  <nav><a href="#prestations">Prestations</a><a href="#tarifs">Tarifs</a><a href="#batterie">Batterie</a><a href="#atelier">L’atelier</a><a href="#contact">Contact</a></nav>
+  <span class="btn t" style="padding:12px 22px">Prendre rendez-vous</span>
+</header>
+<section class="hero">
+  <div class="txt"><span class="cap">Garage indépendant · véhicules hybrides et électriques</span>
+    <h1>Garage spécialisé hybride et électrique à Toulouse</h1>
+    <p>Entretien, diagnostic batterie et réparation de votre véhicule électrique ou hybride, toutes marques. Véhicule de prêt électrique sur réservation.</p>
+    <div class="ctas"><span class="btn t">Prendre rendez-vous</span><span class="btn l">Voir les tarifs</span></div>
+    <div class="chips"><span>Électrique</span><span>Hybride</span><span>Hybride rechargeable</span><span>Toutes marques</span></div></div>
+  <div class="pic"></div>
+</section>
+
+<section id="prestations" class="sel">
+  <div class="sh"><div><span class="cap">Votre véhicule</span><h2>Choisissez votre motorisation</h2></div><p>Les prestations et tarifs s’adaptent à votre véhicule.</p></div>
+  <div class="grid">
+    <div class="op on"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 3 5 13h6l-1 8 8-10h-6z"/></svg></span><div><b>100 % électrique</b><span>Zoe, Model 3, e-208, Leaf…</span></div></div>
+    <div class="op"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="8"/><path d="M12 8v8M8 12h8"/></svg></span><div><b>Hybride</b><span>Yaris, Clio E-Tech, Niro…</span></div></div>
+    <div class="op"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="3" width="12" height="18" rx="2"/><path d="M10 8h4M12 6v4"/></svg></span><div><b>Hybride rechargeable</b><span>3008 Hybrid, Outlander PHEV…</span></div></div>
+  </div>
+</section>
+
+<section id="tarifs" class="svc">
+  <div class="tab">
+    <div class="hd"><span>Prestation · 100 % électrique</span><span>Durée</span><span>Prix</span><span>Disponibilité</span></div>
+    <div class="r"><div><b>Entretien annuel</b><small>Freins, liquide de refroidissement, filtre d’habitacle</small></div><span>1 h 30</span><span class="p">149 €</span><span>sous 3 jours</span></div>
+    <div class="r"><div><b>Diagnostic batterie</b><small>Rapport d’état de santé de la batterie</small></div><span>45 min</span><span class="p">89 €</span><span>sous 3 jours</span></div>
+    <div class="r"><div><b>Pneus pour électrique</b><small>Montage, équilibrage, pneus adaptés</small></div><span>1 h</span><span class="p">dès 25 € / pneu</span><span>sous 5 jours</span></div>
+    <div class="r"><div><b>Climatisation et pompe à chaleur</b><small>Contrôle et recharge</small></div><span>1 h</span><span class="p">99 €</span><span>sous 5 jours</span></div>
+    <div class="r"><div><b>Vidange</b><small>Pas d’huile moteur sur un électrique</small></div><span class="na">—</span><span class="na">non nécessaire</span><span class="na">—</span></div>
+  </div>
+  <p class="illu">Tarifs indicatifs pour une citadine électrique. Devis gratuit pour toute réparation.</p>
+</section>
+
+<section id="batterie" class="bat">
+  <div class="txt"><span class="cap">Batterie</span><h2>Connaître l’état de santé de votre batterie</h2>
+    <p>Utile avant d’acheter ou de revendre un véhicule d’occasion, ou si l’autonomie baisse. Vous repartez avec un rapport écrit.</p>
+    <div class="gauge"><div class="hd"><span>Exemple de rapport</span><span>Citadine électrique, 62 000 km</span></div>
+      <div class="bar"><i></i></div>
+      <div class="row"><div><span>État de santé</span><b>91 %</b></div><div><span>Autonomie estimée</span><b>285 km</b></div><div><span>Cellules</span><b>équilibrées</b></div></div>
+      <small>Valeurs d’exemple, à titre d’illustration.</small></div></div>
+  <div class="pic"></div>
+</section>
+
+<section id="atelier" class="why">
+  <div class="sh"><div><span class="cap">L’atelier</span><h2>Équipé pour la haute tension</h2></div></div>
+  <div class="wg">
+    <div class="wc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/></svg><b>Habilitation électrique</b><p>Intervention sur circuits haute tension : <span class="ph">[niveau d’habilitation à préciser]</span>.</p></div>
+    <div class="wc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="7" width="18" height="10" rx="2"/><path d="M21 11v2M7 11h4"/></svg><b>Outils de diagnostic</b><p>Lecture de l’état des batteries et des calculateurs, toutes marques.</p></div>
+    <div class="wc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 3 5 13h6l-1 8 8-10h-6z"/></svg><b>Borne sur place</b><p>Votre véhicule vous est rendu rechargé.</p></div>
+    <div class="wc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 15h16l-2-6H6zM6 15v3M18 15v3"/></svg><b>Véhicule de prêt</b><p>Électrique, sur réservation.</p></div>
+  </div>
+</section>
+
+<section class="gal">
+  <div class="gg"><div class="t" style="background-image:url(img/e-cliente.jpg)"></div><div style="background-image:url(img/e-prise.jpg)"></div><div style="background-image:url(img/e-suv.jpg)"></div><div style="background-image:url(img/e-mecano.jpg)"></div><div style="background-image:url(img/e-borne.jpg)"></div></div>
+</section>
+
+<section id="contact" class="infos">
+  <div><h3>Horaires</h3>
+    <div class="hrow"><span>Lundi → vendredi</span><span>8 h – 18 h</span></div>
+    <div class="hrow"><span>Samedi</span><span>9 h – 12 h</span></div>
+    <div class="hrow"><span>Dimanche</span><span>Fermé</span></div></div>
+  <div><h3>Atelier</h3><p><span class="ph">[Adresse de l’atelier]</span><br><span class="ph">31000 Toulouse</span></p><p style="margin-top:12px;color:var(--mut)">Métro à 5 min, borne de recharge client.</p></div>
+  <div><h3>Contact</h3><p><span class="ph">[05 00 00 00 00]</span><br><span class="ph">[contact@garage-ampere.fr]</span></p><span class="btn t" style="margin-top:20px">Prendre rendez-vous</span></div>
+</section>
+<footer><span>© Garage Ampère · Mentions légales · Confidentialité</span><span>Maquette — entreprise fictive · informations illustratives</span></footer>
+
+</div>
+<div class="mb">
+
+<header id="mb-head"><span style="display:flex;align-items:center;gap:10px"><span style="width:34px;height:34px;border-radius:10px;background:#0F4C4A;display:grid;place-items:center"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round"><path d="M13 3 5 13h6l-1 8 8-10h-6z"/></svg></span><span style="font-family:Outfit;font-weight:700;font-size:20px;letter-spacing:-.02em">Garage Ampère</span></span><div class="r"><span class="btn a">Réserver</span><span class="burger"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 9h16M4 15h16"/></svg></span></div></header>
+<section class="hero" id="mb-hero">
+  <div class="p"><div class="cap">Hybrides et électriques · Toulouse</div><h1>Garage spécialisé hybride et électrique à Toulouse</h1><p>Entretien, diagnostic batterie et réparation, toutes marques.</p></div>
+  <div class="img" style="background-image:url(img/e-capot.jpg)"></div>
+  <div class="book"><div class="cap">Votre motorisation</div><div class="mot"><span class="on">Électrique</span><span>Hybride</span><span>Rechargeable</span></div><span class="btn a">Prendre rendez-vous</span><p class="note">Via <span class="ph">[outil de rendez-vous]</span></p></div>
+</section>
+<section class="blk" id="mb-sig"><div class="cap">Tarifs · 100 % électrique</div><h2>Nos prestations</h2><div style="margin-top:10px"><div class="rm"><div class="th" style="background-image:url(img/e-capot.jpg)"></div><div><b>Entretien annuel</b><small>freins, liquides, filtre</small></div><span class="pr">149 €</span></div><div class="rm"><div class="th" style="background-image:url(img/e-batterie.jpg)"></div><div><b>Diagnostic batterie</b><small>rapport d’état de santé</small></div><span class="pr">89 €</span></div><div class="rm"><div class="th" style="background-image:url(img/e-trappe.jpg)"></div><div><b>Pneus pour électrique</b><small>montage, équilibrage</small></div><span class="pr">dès 25 €</span></div><div class="rm"><div class="th" style="background-image:url(img/e-borne.jpg)"></div><div><b>Clim et pompe à chaleur</b><small>contrôle et recharge</small></div><span class="pr">99 €</span></div></div><p class="illu">Tarifs indicatifs pour une citadine électrique.</p><div class="gauge"><span style="font-size:12px;color:#BFE0A4;letter-spacing:.1em;text-transform:uppercase">Exemple de rapport batterie</span><div class="bar"><i></i></div><div class="r"><span>État de santé <b>91 %</b></span><span>Autonomie <b>285 km</b></span></div></div></section>
+<section id="mb-rail" style="padding:44px 0 44px;"><div class="p"><div class="cap">L’atelier</div><h2>Équipé pour la haute tension</h2></div><div class="rail" data-rail><div class="c"><div class="im" style="background-image:url(img/e-mecano.jpg)"></div><h3>Outils de diagnostic</h3><p>Toutes marques.</p></div><div class="c"><div class="im" style="background-image:url(img/e-borne.jpg)"></div><h3>Borne sur place</h3><p>Rendu rechargé.</p></div><div class="c"><div class="im" style="background-image:url(img/e-cliente.jpg)"></div><h3>Véhicule de prêt</h3><p>Électrique, sur réservation.</p></div></div><div class="dots" data-dots><i class="on"></i><i></i><i></i></div></section>
+<section class="blk" id="mb-team" style="padding-top:44px"><div class="cap">Bon à savoir</div><h2>Entretenir un électrique</h2><div style="margin-top:10px"><div class="row"><div><b>Pas de vidange</b><small>pas d’huile moteur</small></div><span class="pr"></span></div><div class="row"><div><b>Freins</b><small>usure plus lente</small></div><span class="pr"></span></div><div class="row"><div><b>Batterie</b><small>contrôle conseillé chaque année</small></div><span class="pr"></span></div><div class="row"><div><b>Pneus</b><small>usure plus rapide</small></div><span class="pr"></span></div></div></section>
+<section class="blk" id="mb-infos" style="padding-top:20px"><div class="cap">Infos pratiques</div><h2>Venir à l’atelier</h2><div class="today"><div><b>Aujourd’hui</b><span>8 h – 18 h</span></div><em>Ouvert</em></div><div style="margin-top:6px"><div class="hrow"><span>Lun → ven</span><span>8 h – 18 h</span></div><div class="hrow"><span>Samedi</span><span>9 h – 12 h</span></div><div class="hrow"><span>Dimanche</span><span>Fermé</span></div></div>
+<div class="map"><svg viewBox="0 0 390 220" preserveAspectRatio="xMidYMid slice"><rect width="390" height="220" fill="#E8F2F0"/><path d="M-20 160C90 130 200 190 410 140" stroke="#CFE0DC" stroke-width="18" fill="none"/><g stroke="#fff" stroke-width="8"><path d="M60 -10L150 230M-10 60L410 90"/></g><circle cx="200" cy="100" r="18" fill="#0F4C4A" opacity=".14"/><circle cx="200" cy="100" r="6" fill="#0F4C4A"/></svg></div><p style="margin-top:14px;font-size:14.5px">Garage Ampère · <span class="ph">[Adresse], 31000 Toulouse</span></p><div class="two"><span class="btn a">Itinéraire</span><span class="btn o">Appeler</span></div><p class="illu">Borne de recharge client sur place.</p></section>
+<section class="final" id="mb-final"><div class="cap">Toutes marques</div><h2>Prenez rendez-vous</h2><p>Hybride, rechargeable ou 100 % électrique.</p><span class="btn a">Prendre rendez-vous</span></section>
+<footer id="mb-foot"><span style="display:flex;align-items:center;gap:10px"><span style="width:34px;height:34px;border-radius:10px;background:#0F4C4A;display:grid;place-items:center"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round"><path d="M13 3 5 13h6l-1 8 8-10h-6z"/></svg></span><span style="font-family:Outfit;font-weight:700;font-size:20px;letter-spacing:-.02em">Garage Ampère</span></span><p style="margin-top:10px">Garage spécialisé hybride et électrique à Toulouse.</p><div class="links"><span>Prestations</span><span>Tarifs</span><span>Batterie</span><span>L’atelier</span><span>Contact</span><span>Mentions légales</span></div><div class="sm"><span>[05 00 00 00 00]</span><span>Maquette — restaurant fictif</span></div></footer>
+<div class="sticky" id="sticky"><span class="call"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></span><span class="btn a">Prendre rendez-vous</span></div>
+
+</div>
+<script>
+  // la maquette ordinateur est dessinée sur 1440 px : on la met à l'échelle de la fenêtre
+  const dk = document.querySelector('.dk');
+  let lastW = 0;
+  function fit() {
+    const w = document.documentElement.clientWidth;
+    if (w === lastW) return;
+    lastW = w;
+    dk.style.zoom = w > 760 ? w / 1440 : '';
+  }
+  addEventListener('resize', fit); setInterval(fit, 300); fit();
+
+  // points du carrousel (mobile)
+  const rail = document.querySelector('.mb [data-rail]');
+  const dots = [...document.querySelectorAll('.mb [data-dots] i')];
+  rail.addEventListener('scroll', () => {
+    const i = Math.round(rail.scrollLeft / (rail.scrollWidth - rail.clientWidth) * (dots.length - 1));
+    dots.forEach((d, k) => d.classList.toggle('on', k === i));
+  }, { passive: true });
+</script>
+</body>
+</html>

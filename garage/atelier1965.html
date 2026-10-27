@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Atelier 1965 — voitures anciennes, Tours (maquette)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bitter:wght@500..800&family=Karla:wght@300..700&display=swap">
+<style>
+/* ===== version ordinateur (maquette 1440 px, mise à l'échelle) ===== */
+:root{--green:#1F3B2D;--green2:#2C4D3B;--bone:#F2F1EC;--paper:#FFFFFF;--ink:#1D221E;--mut:#5E655F;--line:#DEDDD5;--brass:#A07E3F}
+*{box-sizing:border-box;margin:0;padding:0}
+.dk{width:1440px;position:relative;background:var(--paper);color:var(--ink);font-family:'Karla',sans-serif;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.dk .cap{font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--brass)}
+.dk h2{font-family:'Bitter',serif;font-weight:700;font-size:52px;line-height:1.05;color:var(--green)}
+.dk .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-weight:700;font-size:15px;padding:16px 26px;white-space:nowrap}
+.dk .btn.g{background:var(--green);color:#fff}
+.dk .btn.b{background:var(--brass);color:#fff}
+.dk .btn.w{background:#fff;color:var(--green)}
+.dk .btn.l{border:1.5px solid currentColor;padding:14.5px 24.5px}
+.dk .ph{border-bottom:1px dashed #A9AB9C;color:var(--mut);white-space:nowrap}
+.dk .sh{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-bottom:46px}
+.dk .sh h2{margin-top:12px}
+.dk .sh p{max-width:400px;color:var(--mut)}
+.dk header{display:flex;align-items:center;justify-content:space-between;padding:22px 80px;background:var(--green);color:#fff}
+.dk .logo{display:flex;align-items:center;gap:14px}
+.dk .logo .badge{width:58px;height:58px;border:2px solid var(--brass);border-radius:50%;display:grid;place-items:center;font-family:'Bitter';font-weight:800;font-size:17px;color:#E5CF9F;letter-spacing:.02em}
+.dk .logo b{font-family:'Bitter';font-weight:800;font-size:25px;display:block;line-height:1;letter-spacing:.02em}
+.dk .logo small{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#C8D2CB}
+.dk nav{display:flex;gap:32px;font-size:15px;font-weight:600}
+.dk .hero{position:relative;height:760px;background:url(img/a-atelier.jpg) center/cover}
+.dk .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(18,30,22,.9) 0%,rgba(18,30,22,.6) 45%,rgba(18,30,22,.08) 80%)}
+.dk .hero .in{position:absolute;left:80px;top:120px;z-index:1;color:#fff;max-width:640px}
+.dk .hero .cap{color:#E5CF9F}
+.dk .hero h1{font-family:'Bitter';font-weight:800;font-size:68px;line-height:1.02;margin:18px 0 20px}
+.dk .hero p{font-size:19px;color:#DCE3DE}
+.dk .hero .ctas{display:flex;gap:12px;margin-top:34px}
+.dk .marques{display:flex;justify-content:space-between;align-items:center;padding:28px 80px;border-bottom:1px solid var(--line);font-family:'Bitter';font-weight:700;font-size:20px;color:#7D837E;letter-spacing:.04em}
+.dk .marques .cap{font-family:'Karla'}
+.dk .serv{padding:110px 80px;display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.dk .sv{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line)}
+.dk .sv .pic{background-size:cover;background-position:center;min-height:300px}
+.dk .sv .body{padding:28px}
+.dk .sv h3{font-family:'Bitter';font-weight:700;font-size:26px;color:var(--green);margin:8px 0 10px}
+.dk .sv p{color:var(--mut);font-size:15.5px}
+.dk .sv .pr{margin-top:14px;font-size:14.5px;font-weight:700;color:var(--brass)}
+.dk .proj{background:var(--bone);padding:110px 80px}
+.dk .pj{display:grid;grid-template-columns:1.2fr .8fr;gap:56px;align-items:start}
+.dk .pj .main{height:520px;background:url(img/a-caisse.jpg) center/cover}
+.dk .pj h3{font-family:'Bitter';font-weight:700;font-size:32px;color:var(--green)}
+.dk .pj .meta{display:flex;gap:18px;margin:10px 0 18px;font-size:14.5px;color:var(--brass);font-weight:700}
+.dk .prog{margin-top:20px}
+.dk .prog div{display:grid;grid-template-columns:24px 1fr auto;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line);font-size:15.5px}
+.dk .prog i{width:14px;height:14px;border-radius:50%;border:2px solid var(--green)}
+.dk .prog i.d{background:var(--green)}
+.dk .prog span.s{font-size:13px;color:var(--mut)}
+.dk .thumbs{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:10px}
+.dk .thumbs div{height:110px;background-size:cover;background-position:center}
+.dk .gal{padding:110px 80px}
+.dk .gg{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.dk .gg figure .im{height:260px;background-size:cover;background-position:center}
+.dk .gg figcaption{margin-top:10px;font-size:14px;color:var(--mut)}
+.dk .gg figcaption b{display:block;font-family:'Bitter';font-weight:700;font-size:18px;color:var(--green)}
+.dk .method{display:grid;grid-template-columns:1fr 1fr;background:var(--green);color:#fff}
+.dk .method .pic{background:url(img/a-moteur.jpg) center/cover;min-height:560px}
+.dk .method .txt{padding:90px 72px}
+.dk .method .cap{color:#E5CF9F}
+.dk .method h2{color:#fff;margin:12px 0 18px}
+.dk .method p{color:#C8D2CB}
+.dk .method ul{list-style:none;margin-top:24px;display:grid;gap:12px}
+.dk .method li{display:grid;grid-template-columns:36px 1fr;gap:12px}
+.dk .method li b{font-family:'Bitter';font-weight:800;color:#E5CF9F;font-size:20px}
+.dk .infos{padding:100px 80px;display:grid;grid-template-columns:1fr 1fr 1.1fr;gap:56px}
+.dk .infos h3{font-family:'Bitter';font-weight:700;font-size:24px;color:var(--green);margin-bottom:12px}
+.dk .hrow{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--line);font-size:15.5px}
+.dk .form{display:grid;grid-template-columns:1fr 1fr;gap:10px;background:var(--bone);padding:22px}
+.dk .form .full{grid-column:1/-1}
+.dk .field{border:1px solid var(--line);background:#fff;padding:11px 13px;font-size:14.5px;color:var(--mut)}
+.dk .field b{display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--green);margin-bottom:3px}
+.dk footer{background:var(--green);color:#AEBBB2;padding:28px 80px 34px;display:flex;justify-content:space-between;font-size:13.5px}
+html{scroll-behavior:smooth}
+body{margin:0;background:#FFFFFF;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.dk{overflow:hidden}
+/* ===== version mobile ===== */
+:root{--bg:#FFFFFF;--fg:#1D221E;--soft:#3D443F;--mut:#5E655F;--line:#DEDDD5;--accent:#A07E3F;--onaccent:#fff;--panel:#F2F1EC;--btnbg:#1F3B2D;--btnfg:#fff;--stickybg:rgba(255,255,255,.97);--disp:"Bitter",serif;--dw:700;--body:"Karla",sans-serif;--emstyle:normal;--rad:0;--avr:0}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bg)}
+.mb{color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.mb .p{padding:0 20px}
+.mb .cap{font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--mut);font-weight:500}
+.mb h2{font-family:var(--disp);font-weight:var(--dw);font-size:38px;line-height:1.08;margin-top:12px}
+.mb h2 em{font-style:var(--emstyle);color:var(--accent)}
+.mb .btn{display:flex;align-items:center;justify-content:center;gap:10px;font-weight:500;font-size:14px;letter-spacing:.06em;padding:15px 18px;white-space:nowrap;border-radius:var(--rad)}
+.mb .btn.a{background:var(--btnbg);color:var(--btnfg)}
+.mb .btn.o{border:1px solid var(--fg);padding:14px 17px}
+.mb .ph{border-bottom:1px dashed var(--mut);color:var(--mut);white-space:nowrap}
+.mb section{position:relative}
+.mb header{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid var(--line)}
+.mb header .r{display:flex;gap:10px;align-items:center}
+.mb header .btn{padding:10px 14px;font-size:12.5px}
+.mb .burger{width:40px;height:40px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center}
+.mb .burger svg{width:18px;height:18px}
+.mb .hero{padding:26px 0 0}
+.mb .hero h1{font-family:var(--disp);font-weight:var(--dw);font-size:46px;line-height:1.05;margin:14px 0 14px}
+.mb .hero h1 em{font-style:var(--emstyle);color:var(--accent)}
+.mb .hero p{color:var(--soft);font-size:16px}
+.mb .hero .img{height:330px;margin-top:24px;background-size:cover;background-position:center}
+.mb .book{margin:0 20px;border:1px solid var(--line);padding:16px;background:var(--panel);transform:translateY(-36px)}
+.mb .book .f{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:6px;margin:10px 0 12px}
+.mb .book .f div{border:1px solid var(--line);padding:7px 10px}
+.mb .book .f b{display:block;font-family:var(--disp);font-weight:var(--dw);font-size:18px}
+.mb .book .note{font-size:12px;color:var(--mut);margin-top:10px}
+.mb .blk{padding:14px 20px 44px}
+.mb .row{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:13px 0;border-bottom:1px solid var(--line)}
+.mb .row b{display:block;font-weight:500;font-size:15.5px;line-height:1.3}
+.mb .row small{display:block;color:var(--mut);font-size:13px}
+.mb .row .pr{font-family:var(--disp);font-size:18px;white-space:nowrap}
+.mb .illu{font-size:12px;color:var(--mut);margin-top:12px}
+.mb .rail{display:flex;gap:12px;overflow:hidden;padding:22px 20px 0}
+.mb .rail .c{flex:none;width:240px}
+.mb .rail .c .im{height:260px;background-size:cover;background-position:center}
+.mb .rail .c h3{font-family:var(--disp);font-weight:var(--dw);font-size:24px;margin-top:12px;line-height:1.1}
+.mb .rail .c p{font-size:13.5px;color:var(--mut);margin-top:4px}
+.mb .dots{display:flex;gap:6px;justify-content:center;margin-top:20px}
+.mb .dots i{width:6px;height:6px;border-radius:50%;background:var(--line)}
+.mb .dots i.on{width:20px;border-radius:6px;background:var(--accent)}
+.mb .mem{display:grid;grid-template-columns:72px 1fr;gap:14px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line)}
+.mb .mem .av{width:72px;height:72px;background-size:cover;background-position:center 30%;border-radius:var(--avr)}
+.mb .mem h3{font-family:var(--disp);font-weight:var(--dw);font-size:22px;line-height:1.1}
+.mb .mem p{font-size:13.5px;color:var(--mut)}
+.mb .today{margin-top:18px;border:1px solid var(--accent);padding:14px 16px;display:flex;justify-content:space-between;align-items:center}
+.mb .today b{font-family:var(--disp);font-weight:var(--dw);font-size:20px;display:block;line-height:1.1}
+.mb .today span{font-size:13px;color:var(--soft)}
+.mb .today em{font-style:normal;background:var(--accent);color:var(--onaccent);font-size:11px;font-weight:600;letter-spacing:.06em;padding:4px 9px}
+.mb .hrow{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--line);font-size:14.5px}
+.mb .map{margin-top:20px;height:220px;border:1px solid var(--line);overflow:hidden}
+.mb .map svg{width:100%;height:100%}
+.mb .two{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px}
+.mb .final{padding:60px 20px 54px;text-align:center;border-top:1px solid var(--line)}
+.mb .final h2{font-size:40px}
+.mb .final p{color:var(--soft);margin:12px 0 22px}
+.mb footer{border-top:1px solid var(--line);padding:30px 20px 120px;color:var(--mut);font-size:13.5px}
+.mb footer .links{display:grid;grid-template-columns:1fr 1fr;gap:6px 14px;margin:18px 0;color:var(--fg)}
+.mb footer .sm{font-size:11.5px;border-top:1px solid var(--line);padding-top:12px;display:flex;justify-content:space-between}
+.mb .sticky{width:390px;padding:12px 16px 26px;background:var(--stickybg);border-top:1px solid var(--line);display:grid;grid-template-columns:52px 1fr;gap:10px}
+.mb .sticky .call{width:52px;height:52px;border:1px solid var(--fg);border-radius:50%;display:grid;place-items:center}
+.mb .sticky .call svg{width:20px;height:20px}
+.mb .rm{display:grid;grid-template-columns:84px 1fr auto;gap:14px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}
+.mb .rm .th{width:84px;height:68px;background-size:cover;background-position:center;border-radius:var(--avr)}
+.mb .rm b{display:block;font-family:var(--disp);font-weight:var(--dw);font-size:18px;line-height:1.15}
+.mb .rm small{display:block;font-size:13px;color:var(--mut)}
+.mb .rm .pr{font-family:var(--disp);font-weight:var(--dw);font-size:16px;white-space:nowrap;color:var(--accent)}
+.mb .today em{font-size:0}
+.mb .today em::after{content:"Ouvert";font-size:11px}
+.mb .cap{color:#A07E3F;font-weight:700}
+.mb #m-rail{background:#F2F1EC}
+.mb .prog div{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid var(--line);font-size:14.5px}
+.mb .prog span:last-child{color:#5E655F;font-size:13px}
+.mb .prog i{display:inline-block;width:10px;height:10px;border-radius:50%;border:2px solid #1F3B2D;margin-right:8px}
+.mb .prog i.d{background:#1F3B2D}
+
+.mb .rail{overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-right:20px}
+.mb .rail::-webkit-scrollbar{display:none}
+.mb .rail .c{scroll-snap-align:start;scroll-margin-left:20px}
+.mb .sticky{position:fixed;left:0;right:0;bottom:0;width:auto;z-index:20;padding-bottom:max(16px,env(safe-area-inset-bottom))}
+
+.mb{display:none}
+@media (max-width:760px){.dk{display:none}.mb{display:block}}
+</style>
+</head>
+<body>
+<div class="dk">
+
+<header>
+  <div class="logo"><span class="badge">1965</span><div><b>ATELIER 1965</b><small>Mécanique et restauration · Tours</small></div></div>
+  <nav><a href="#services">Services</a><a href="#restaurations">Restaurations</a><a href="#methode">Méthode</a><a href="#contact">Contact</a></nav>
+  <span class="btn b" style="padding:12px 22px">Parler de mon projet</span>
+</header>
+<section class="hero"><div class="in">
+  <span class="cap">Voitures anciennes et youngtimers · 1950 à 1995</span>
+  <h1>Garage spécialiste des voitures anciennes à Tours</h1>
+  <p>Entretien, mécanique, restauration partielle ou complète. Devis détaillé et photos de suivi à chaque étape.</p>
+  <div class="ctas"><span class="btn b">Parler de mon projet</span><span class="btn l" style="color:#fff">Voir les restaurations</span></div>
+</div></section>
+<div class="marques"><span class="cap">Marques suivies à l’atelier</span><span>Alfa Romeo</span><span>BMW</span><span>Citroën</span><span>Mercedes-Benz</span><span>Peugeot</span><span>Porsche</span><span>Renault</span></div>
+
+<section id="services" class="serv">
+  <div class="sv"><div class="pic" style="background-image:url(img/a-moteur2.jpg)"></div><div class="body"><span class="cap">Entretien</span><h3>Entretien et mécanique</h3><p>Vidange, carburation, allumage, freins, réglages. Hivernage et remise en route.</p><div class="pr">Révision dès 260 €</div></div></div>
+  <div class="sv"><div class="pic" style="background-image:url(img/a-culasse.jpg)"></div><div class="body"><span class="cap">Moteur</span><h3>Réfection moteur et boîte</h3><p>Démontage, contrôle, pièces d’origine ou refabriquées, rodage.</p><div class="pr">Sur devis détaillé</div></div></div>
+  <div class="sv"><div class="pic" style="background-image:url(img/a-aile.jpg)"></div><div class="body"><span class="cap">Restauration</span><h3>Restauration complète</h3><p>Caisse, tôlerie, peinture, sellerie en partenariat, remontage.</p><div class="pr">Suivi de projet avec photos</div></div></div>
+  <div class="sv"><div class="pic" style="background-image:url(img/a-tableau.jpg)"></div><div class="body"><span class="cap">Achat</span><h3>Inspection avant achat</h3><p>Contrôle complet d’un véhicule avant achat, rapport écrit et photos.</p><div class="pr">Inspection 190 €</div></div></div>
+</section>
+
+<section class="proj">
+  <div class="sh"><div><span class="cap">Projet en cours</span><h2>Suivez la restauration, étape par étape</h2></div><p>Chaque client reçoit un suivi photo. Exemple d’un projet fictif.</p></div>
+  <div class="pj">
+    <div><div class="main"></div><div class="thumbs"><div style="background-image:url(img/a-moteur3.jpg)"></div><div style="background-image:url(img/a-volant.jpg)"></div><div style="background-image:url(img/a-noire.jpg)"></div><div style="background-image:url(img/a-box.jpg)"></div></div></div>
+    <div><h3>Coupé 1968, restauration complète</h3><div class="meta"><span>Début : mars</span><span>Durée prévue : 9 mois</span></div>
+      <p style="color:var(--mut)">Caisse mise à nu, reprise de la tôlerie, moteur refait à neuf, retour à la teinte d’origine.</p>
+      <div class="prog">
+        <div><i class="d"></i><span>Démontage et inventaire</span><span class="s">terminé</span></div>
+        <div><i class="d"></i><span>Tôlerie et traitement</span><span class="s">terminé</span></div>
+        <div><i class="d"></i><span>Moteur et boîte</span><span class="s">terminé</span></div>
+        <div><i></i><span>Peinture</span><span class="s">en cours</span></div>
+        <div><i></i><span>Remontage et réglages</span><span class="s">à venir</span></div>
+      </div></div>
+  </div>
+</section>
+
+<section id="restaurations" class="gal">
+  <div class="sh"><div><span class="cap">Restaurations</span><h2>Passées par l’atelier</h2></div><p>Photos d’illustration. Sur le site final : les véhicules restaurés, avec l’accord des propriétaires.</p></div>
+  <div class="gg">
+    <figure><div class="im" style="background-image:url(img/a-firebird.jpg)"></div><figcaption><b>Coupé américain, 1969</b>Moteur et peinture</figcaption></figure>
+    <figure><div class="im" style="background-image:url(img/a-cabriolet.jpg)"></div><figcaption><b>Cabriolet, 1959</b>Restauration complète</figcaption></figure>
+    <figure><div class="im" style="background-image:url(img/a-porsches.jpg)"></div><figcaption><b>Sportives, années 70</b>Entretien annuel</figcaption></figure>
+    <figure><div class="im" style="background-image:url(img/a-chevy.jpg)"></div><figcaption><b>Berline, 1957</b>Sellerie et chromes</figcaption></figure>
+  </div>
+</section>
+
+<section id="methode" class="method">
+  <div class="pic"></div>
+  <div class="txt"><span class="cap">Méthode</span><h2>Un projet, un devis, un suivi</h2>
+    <p>Pas de mauvaise surprise : chaque étape est chiffrée et validée avec vous avant d’être lancée.</p>
+    <ul><li><b>01</b><span>Visite de l’auto et premier diagnostic, à l’atelier</span></li><li><b>02</b><span>Devis détaillé par étape, avec délais</span></li><li><b>03</b><span>Photos de suivi chaque semaine</span></li><li><b>04</b><span>Essai routier et remise des pièces remplacées</span></li></ul></div>
+</section>
+
+<section id="contact" class="infos">
+  <div><h3>Horaires</h3>
+    <div class="hrow"><span>Lundi → vendredi</span><span>8 h 30 – 18 h</span></div>
+    <div class="hrow"><span>Samedi</span><span>visites sur rendez-vous</span></div>
+    <p style="margin-top:14px;color:var(--mut)">Stockage et hivernage sur place.</p></div>
+  <div><h3>Atelier</h3><p><span class="ph">[Adresse de l’atelier]</span><br><span class="ph">37000 Tours</span></p><p style="margin-top:12px"><span class="ph">[02 00 00 00 00]</span><br><span class="ph">[atelier@atelier1965.fr]</span></p></div>
+  <div class="form">
+    <div class="field"><b>Véhicule</b>Marque, modèle</div><div class="field"><b>Année</b>19..</div>
+    <div class="field full"><b>Besoin</b>Entretien · Moteur · Restauration · Inspection</div>
+    <div class="field full"><b>Votre projet</b>État actuel, objectifs, budget…</div>
+    <span class="btn g full">Parler de mon projet</span></div>
+</section>
+<footer><span>© Atelier 1965 · Mentions légales · Confidentialité</span><span>[02 00 00 00 00]</span><span>Maquette — entreprise fictive · informations illustratives</span></footer>
+
+</div>
+<div class="mb">
+
+<header id="mb-head"><span style="display:flex;align-items:center;gap:10px"><span style="width:40px;height:40px;border:2px solid #A07E3F;border-radius:50%;display:grid;place-items:center;font-family:Bitter;font-weight:800;font-size:12px;color:#A07E3F">1965</span><span style="font-family:Bitter;font-weight:800;font-size:19px;letter-spacing:.02em;color:#1F3B2D">ATELIER 1965</span></span><div class="r"><span class="btn a">Réserver</span><span class="burger"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 9h16M4 15h16"/></svg></span></div></header>
+<section class="hero" id="mb-hero">
+  <div class="p"><div class="cap">Voitures anciennes · 1950 à 1995</div><h1>Garage spécialiste des voitures anciennes à Tours</h1><p>Entretien, mécanique, restauration. Devis détaillé et photos de suivi.</p></div>
+  <div class="img" style="background-image:url(img/a-atelier.jpg)"></div>
+  <div class="book"><div class="cap">Votre projet</div><div class="f" style="grid-template-columns:1.4fr 1fr"><div><span class="cap">Véhicule</span><b>Coupé</b></div><div><span class="cap">Année</span><b>1968</b></div></div><span class="btn a">Parler de mon projet</span><p class="note">Visite de l’auto à l’atelier, sur rendez-vous.</p></div>
+</section>
+<section class="blk" id="mb-sig"><div class="cap">Services</div><h2>Ce que l’on fait</h2><div style="margin-top:10px"><div class="rm"><div class="th" style="background-image:url(img/a-moteur2.jpg)"></div><div><b>Entretien et mécanique</b><small>carburation, allumage</small></div><span class="pr">dès 260 €</span></div><div class="rm"><div class="th" style="background-image:url(img/a-culasse.jpg)"></div><div><b>Réfection moteur</b><small>pièces d’origine</small></div><span class="pr">sur devis</span></div><div class="rm"><div class="th" style="background-image:url(img/a-aile.jpg)"></div><div><b>Restauration complète</b><small>caisse, tôlerie, peinture</small></div><span class="pr">sur devis</span></div><div class="rm"><div class="th" style="background-image:url(img/a-tableau.jpg)"></div><div><b>Inspection avant achat</b><small>rapport écrit</small></div><span class="pr">190 €</span></div></div><p class="illu">Tarifs indicatifs.</p></section>
+<section id="mb-rail" style="padding:44px 0 44px;"><div class="p"><div class="cap">Restaurations</div><h2>Passées par l’atelier</h2></div><div class="rail" data-rail><div class="c"><div class="im" style="background-image:url(img/a-firebird.jpg)"></div><h3>Coupé, 1969</h3><p>Moteur et peinture.</p></div><div class="c"><div class="im" style="background-image:url(img/a-cabriolet.jpg)"></div><h3>Cabriolet, 1959</h3><p>Restauration complète.</p></div><div class="c"><div class="im" style="background-image:url(img/a-chevy.jpg)"></div><h3>Berline, 1957</h3><p>Sellerie et chromes.</p></div></div><div class="dots" data-dots><i class="on"></i><i></i><i></i></div></section>
+<section class="blk" id="mb-team" style="padding-top:44px"><div class="cap">Projet en cours</div><h2>Suivi étape par étape</h2><div class="hero" style="padding:0"><div class="img" style="height:200px;margin-top:16px;background-image:url(img/a-caisse.jpg)"></div></div><div class="prog"><div><span><i class="d"></i>Démontage</span><span>terminé</span></div><div><span><i class="d"></i>Tôlerie</span><span>terminé</span></div><div><span><i class="d"></i>Moteur</span><span>terminé</span></div><div><span><i></i>Peinture</span><span>en cours</span></div><div><span><i></i>Remontage</span><span>à venir</span></div></div><p class="illu">Exemple de projet fictif.</p></section>
+<section class="blk" id="mb-infos" style="padding-top:20px"><div class="cap">Infos pratiques</div><h2>Venir à l’atelier</h2><div class="today"><div><b>Aujourd’hui</b><span>8 h 30 – 18 h</span></div><em>Ouvert</em></div><div style="margin-top:6px"><div class="hrow"><span>Lun → ven</span><span>8 h 30 – 18 h</span></div><div class="hrow"><span>Samedi</span><span>visites sur RDV</span></div><div class="hrow"><span>Hivernage</span><span>sur place</span></div></div>
+<div class="map"><svg viewBox="0 0 390 220" preserveAspectRatio="xMidYMid slice"><rect width="390" height="220" fill="#F2F1EC"/><path d="M-20 140C100 120 220 160 410 120" stroke="#D5DED8" stroke-width="20" fill="none"/><text x="20" y="160" fill="#8B8D7E" font-family="Karla" font-size="11" letter-spacing="3">LA LOIRE</text><circle cx="200" cy="80" r="18" fill="#1F3B2D" opacity=".14"/><circle cx="200" cy="80" r="6" fill="#1F3B2D"/></svg></div><p style="margin-top:14px;font-size:14.5px">Atelier 1965 · <span class="ph">[Adresse], 37000 Tours</span></p><div class="two"><span class="btn a">Itinéraire</span><span class="btn o">Appeler</span></div><p class="illu">Stockage et hivernage sur place.</p></section>
+<section class="final" id="mb-final"><div class="cap">Un projet ?</div><h2>Parlons de votre voiture</h2><p>Visite à l’atelier et devis détaillé.</p><span class="btn a">Parler de mon projet</span></section>
+<footer id="mb-foot"><span style="display:flex;align-items:center;gap:10px"><span style="width:40px;height:40px;border:2px solid #A07E3F;border-radius:50%;display:grid;place-items:center;font-family:Bitter;font-weight:800;font-size:12px;color:#A07E3F">1965</span><span style="font-family:Bitter;font-weight:800;font-size:19px;letter-spacing:.02em;color:#1F3B2D">ATELIER 1965</span></span><p style="margin-top:10px">Mécanique et restauration de voitures anciennes à Tours.</p><div class="links"><span>Services</span><span>Restaurations</span><span>Méthode</span><span>Contact</span><span>Mentions légales</span><span>Confidentialité</span></div><div class="sm"><span>[02 00 00 00 00]</span><span>Maquette — restaurant fictif</span></div></footer>
+<div class="sticky" id="sticky"><span class="call"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></span><span class="btn a">Parler de mon projet</span></div>
+
+</div>
+<script>
+  // la maquette ordinateur est dessinée sur 1440 px : on la met à l'échelle de la fenêtre
+  const dk = document.querySelector('.dk');
+  let lastW = 0;
+  function fit() {
+    const w = document.documentElement.clientWidth;
+    if (w === lastW) return;
+    lastW = w;
+    dk.style.zoom = w > 760 ? w / 1440 : '';
+  }
+  addEventListener('resize', fit); setInterval(fit, 300); fit();
+
+  // points du carrousel (mobile)
+  const rail = document.querySelector('.mb [data-rail]');
+  const dots = [...document.querySelectorAll('.mb [data-dots] i')];
+  rail.addEventListener('scroll', () => {
+    const i = Math.round(rail.scrollLeft / (rail.scrollWidth - rail.clientWidth) * (dots.length - 1));
+    dots.forEach((d, k) => d.classList.toggle('on', k === i));
+  }, { passive: true });
+</script>
+</body>
+</html>
