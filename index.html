@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<title>Maquettes — site de salon de coiffure</title>
+<title>Maquettes — sites de salon de coiffure</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Manrope:wght@500..800&display=swap">
 <style>
@@ -16,10 +16,11 @@
   .brand b{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:18px;color:#fff;letter-spacing:-.04em}
   .brand b i{font-style:normal;color:var(--blush)}
   .brand span{color:#B8BDD0}
-  .switch{position:relative;display:grid;grid-template-columns:1fr 1fr;background:#1F2442;border-radius:999px;padding:4px}
-  .switch .pill{position:absolute;top:4px;bottom:4px;left:4px;width:calc(50% - 4px);border-radius:999px;background:#fff;transition:transform .22s cubic-bezier(.3,.7,.2,1)}
+  .switch{position:relative;display:grid;grid-template-columns:repeat(3,1fr);background:#1F2442;border-radius:999px;padding:4px}
+  .switch .pill{position:absolute;top:4px;bottom:4px;left:4px;width:calc((100% - 8px) / 3);border-radius:999px;background:#fff;transition:transform .22s cubic-bezier(.3,.7,.2,1)}
   .switch[data-on="complet"] .pill{transform:translateX(100%)}
-  .switch button{position:relative;z-index:1;border:0;background:none;cursor:pointer;font:inherit;color:#C9CDDD;padding:8px 22px;border-radius:999px;display:flex;align-items:baseline;gap:8px;white-space:nowrap;transition:color .2s}
+  .switch[data-on="ressort"] .pill{transform:translateX(200%)}
+  .switch button{position:relative;z-index:1;border:0;background:none;cursor:pointer;font:inherit;color:#C9CDDD;padding:8px 20px;border-radius:999px;display:flex;justify-content:center;align-items:baseline;gap:8px;white-space:nowrap;transition:color .2s}
   .switch button b{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:15px;letter-spacing:-.02em}
   .switch button span{font-size:12.5px;font-weight:600;color:#B8BDD0}
   .switch button[aria-pressed="true"]{color:var(--ink)}
@@ -32,11 +33,13 @@
   .stage{position:relative;height:calc(100% - var(--bar));background:#fff}
   .stage iframe{position:absolute;inset:0;width:100%;height:100%;border:0;visibility:hidden}
   .stage iframe.on{visibility:visible}
-  @media (max-width:900px){.hint{display:none}.brand span{display:none}}
+  @media (max-width:1240px){.hint{display:none}.brand span{display:none}}
+  @media (max-width:900px){.switch button span{display:none}}
   @media (max-width:640px){
     .bar{grid-template-columns:1fr;padding:0 12px}
     .brand,.tools{display:none}
-    .switch button{padding:8px 10px;justify-content:center}
+    .switch button{padding:8px 6px}
+    .switch button b{font-size:13.5px}
   }
 </style>
 </head>
@@ -47,18 +50,20 @@
     <span class="pill" aria-hidden="true"></span>
     <button data-id="essentiel" aria-pressed="true"><b>Essentiel</b><span>690 € HT</span></button>
     <button data-id="complet" aria-pressed="false"><b>Complet</b><span>1 190 € HT</span></button>
+    <button data-id="ressort" aria-pressed="false"><b>Sur mesure</b><span>1 990 – 2 990 € HT</span></button>
   </div>
   <div class="tools">
-    <span class="hint">Touches <kbd>1</kbd> <kbd>2</kbd> ou <kbd>←</kbd> <kbd>→</kbd></span>
+    <span class="hint">Touches <kbd>1</kbd> <kbd>2</kbd> <kbd>3</kbd> ou <kbd>←</kbd> <kbd>→</kbd></span>
     <a id="solo" href="essentiel.html" target="_blank" rel="noopener">Ouvrir seule ↗</a>
   </div>
 </div>
 <div class="stage">
   <iframe id="f-essentiel" class="on" src="essentiel.html" title="Formule Essentiel"></iframe>
   <iframe id="f-complet" src="complet.html" title="Formule Complet" loading="eager"></iframe>
+  <iframe id="f-ressort" src="ressort.html" title="Formule Sur mesure" loading="eager"></iframe>
 </div>
 <script>
-  const ids = ['essentiel', 'complet'];
+  const ids = ['essentiel', 'complet', 'ressort'];
   const sw = document.querySelector('.switch');
   const solo = document.getElementById('solo');
 
@@ -75,11 +80,11 @@
 
   function onKey(e) {
     if (e.metaKey || e.ctrlKey || e.altKey) return;
-    if (e.key === '1') show('essentiel');
-    else if (e.key === '2') show('complet');
-    else if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
-      show(sw.dataset.on === 'essentiel' ? 'complet' : 'essentiel');
-    } else return;
+    const i = ids.indexOf(sw.dataset.on);
+    if (e.key >= '1' && e.key <= String(ids.length)) show(ids[e.key - 1]);
+    else if (e.key === 'ArrowRight') show(ids[(i + 1) % ids.length]);
+    else if (e.key === 'ArrowLeft') show(ids[(i + ids.length - 1) % ids.length]);
+    else return;
     e.preventDefault();
   }
 
