@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Maquettes — sites de restaurant</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Manrope:wght@500..800&display=swap">
+<style>
+  :root{--ink:#12162B;--cobalt:#2C44D8;--blush:#F7CFC8;--bar:60px}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%;overflow:hidden;background:var(--ink);font-family:'Manrope',system-ui,sans-serif}
+  .bar{height:var(--bar);display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:16px;padding:0 20px;color:#C9CDDD;font-size:13px}
+  .brand{display:flex;align-items:center;gap:10px;white-space:nowrap}
+  .brand b{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:18px;color:#fff;letter-spacing:-.04em}
+  .brand b i{font-style:normal;color:var(--blush)}
+  .sector{display:flex;gap:2px;background:#1F2442;border-radius:999px;padding:3px}
+  .sector a{color:#B8BDD0;padding:5px 12px;border-radius:999px;font-weight:600;font-size:12.5px;text-decoration:none}
+  .sector a.on{background:#3A4060;color:#fff}
+  .sector a:hover{color:#fff}
+  .switch{position:relative;display:grid;grid-template-columns:repeat(3,1fr);background:#1F2442;border-radius:999px;padding:4px}
+  .switch .pill{position:absolute;top:4px;bottom:4px;left:4px;width:calc((100% - 8px) / 3);border-radius:999px;background:#fff;transition:transform .22s cubic-bezier(.3,.7,.2,1)}
+  .switch[data-on="complet"] .pill{transform:translateX(100%)}
+  .switch[data-on="braise"] .pill{transform:translateX(200%)}
+  .switch button{position:relative;z-index:1;border:0;background:none;cursor:pointer;font:inherit;color:#C9CDDD;padding:8px 20px;border-radius:999px;display:flex;justify-content:center;align-items:baseline;gap:8px;white-space:nowrap;transition:color .2s}
+  .switch button b{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:15px;letter-spacing:-.02em}
+  .switch button span{font-size:12.5px;font-weight:600;color:#B8BDD0}
+  .switch button[aria-pressed="true"]{color:var(--ink)}
+  .switch button[aria-pressed="true"] span{color:var(--cobalt)}
+  .switch button:focus-visible{outline:2px solid var(--blush);outline-offset:2px}
+  .tools{display:flex;justify-content:flex-end;align-items:center;gap:18px;white-space:nowrap}
+  .tools kbd{font:600 11px 'Manrope';border:1px solid #3A4060;border-radius:4px;padding:1px 6px;color:#fff}
+  .tools a{color:#fff;text-decoration:none;font-weight:600;display:inline-flex;gap:6px;align-items:center}
+  .tools a:hover{text-decoration:underline;text-underline-offset:4px}
+  .stage{position:relative;height:calc(100% - var(--bar));background:#fff}
+  .stage iframe{position:absolute;inset:0;width:100%;height:100%;border:0;visibility:hidden}
+  .stage iframe.on{visibility:visible}
+  @media (max-width:1240px){.hint{display:none}}
+  @media (max-width:1100px){.brand b{display:none}}
+  @media (max-width:900px){.switch button span{display:none}}
+  @media (max-width:640px){
+    :root{--bar:96px}
+    .bar{grid-template-columns:1fr;align-content:center;gap:8px;padding:8px 12px}
+    .brand{justify-content:center}
+    .tools{display:none}
+    .switch button{padding:8px 6px}
+    .switch button b{font-size:13.5px}
+  }
+</style>
+</head>
+<body>
+<div class="bar">
+  <div class="brand"><b>Maquettes<i>.</i></b><nav class="sector" aria-label="Secteur"><a href="../">Salons</a><a class="on" href="./">Restaurants</a></nav></div>
+  <div class="switch" role="group" aria-label="Choisir la formule" data-on="essentiel">
+    <span class="pill" aria-hidden="true"></span>
+    <button data-id="essentiel" aria-pressed="true"><b>Essentiel</b><span>690 € HT</span></button>
+    <button data-id="complet" aria-pressed="false"><b>Complet</b><span>1 190 € HT</span></button>
+    <button data-id="braise" aria-pressed="false"><b>Sur mesure</b><span>1 990 – 2 990 € HT</span></button>
+  </div>
+  <div class="tools">
+    <span class="hint">Touches <kbd>1</kbd> <kbd>2</kbd> <kbd>3</kbd> ou <kbd>←</kbd> <kbd>→</kbd></span>
+    <a id="solo" href="essentiel.html" target="_blank" rel="noopener">Ouvrir seule ↗</a>
+  </div>
+</div>
+<div class="stage">
+  <iframe id="f-essentiel" class="on" src="essentiel.html" title="Formule Essentiel"></iframe>
+  <iframe id="f-complet" src="complet.html" title="Formule Complet" loading="eager"></iframe>
+  <iframe id="f-braise" src="braise.html" title="Formule Sur mesure" loading="eager"></iframe>
+</div>
+<script>
+  const ids = ['essentiel', 'complet', 'braise'];
+  const sw = document.querySelector('.switch');
+  const solo = document.getElementById('solo');
+
+  function show(id) {
+    if (!ids.includes(id)) id = ids[0];
+    ids.forEach(k => {
+      document.getElementById('f-' + k).classList.toggle('on', k === id);
+      sw.querySelector(`[data-id="${k}"]`).setAttribute('aria-pressed', k === id);
+    });
+    sw.dataset.on = id;
+    solo.href = id + '.html';
+    history.replaceState(null, '', '#' + id);
+  }
+
+  function onKey(e) {
+    if (e.metaKey || e.ctrlKey || e.altKey) return;
+    const i = ids.indexOf(sw.dataset.on);
+    if (e.key >= '1' && e.key <= String(ids.length)) show(ids[e.key - 1]);
+    else if (e.key === 'ArrowRight') show(ids[(i + 1) % ids.length]);
+    else if (e.key === 'ArrowLeft') show(ids[(i + ids.length - 1) % ids.length]);
+    else return;
+    e.preventDefault();
+  }
+
+  sw.addEventListener('click', e => {
+    const b = e.target.closest('button');
+    if (b) show(b.dataset.id);
+  });
+  document.addEventListener('keydown', onKey);
+  // les raccourcis marchent aussi quand le focus est dans une maquette
+  ids.forEach(k => {
+    const f = document.getElementById('f-' + k);
+    f.addEventListener('load', () => {
+      try { f.contentWindow.addEventListener('keydown', onKey); } catch (_) {}
+    });
+  });
+
+  show(location.hash.slice(1));
+</script>
+</body>
+</html>

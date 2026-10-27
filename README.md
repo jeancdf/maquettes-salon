@@ -1,14 +1,16 @@
-# Maquettes — site de salon de coiffure
+# Maquettes — sites vitrines
 
-Trois maquettes de site vitrine pour salon de coiffure, à présenter aux prospects :
+Maquettes de sites vitrines à présenter aux prospects, en trois formules, pour deux secteurs.
 
-- **Essentiel — 690 € HT** : site d’une page (`essentiel.html`)
-- **Complet — 1 190 € HT** : site de 5 pages, page d’accueil représentée (`complet.html`)
-- **Sur mesure — 1 990 à 2 990 € HT** : identité et page d’accueil entièrement personnalisées pour « Ressort », salon fictif lyonnais spécialisé dans les cheveux bouclés (`ressort.html`)
+| Formule | Prix | Salons de coiffure | Restaurants |
+| --- | --- | --- | --- |
+| Essentiel | 690 € HT | `essentiel.html` (l’épi) | `restaurant/essentiel.html` (La Tablée) |
+| Complet | 1 190 € HT | `complet.html` (l’épi) | `restaurant/complet.html` (La Tablée) |
+| Sur mesure | 1 990 à 2 990 € HT | `ressort.html` (Ressort, Lyon) | `restaurant/braise.html` (Braise, Bordeaux) |
 
-Essentiel et Complet utilisent le même salon fictif (« l’épi ») pour comparer les gammes.
+Essentiel et Complet utilisent le même établissement fictif pour comparer les gammes. Le sur-mesure a sa propre identité.
 
-`index.html` permet de basculer instantanément de l’une à l’autre (boutons, touches `1` / `2` / `3` ou flèches ←/→, liens directs `#essentiel`, `#complet` et `#ressort`).
+`index.html` (salons) et `restaurant/index.html` (restaurants) permettent de basculer instantanément d’une formule à l’autre : boutons, touches `1` / `2` / `3` ou flèches ←/→, liens directs par ancre (`#essentiel`, `#complet`, `#ressort`, `#braise`). Le sélecteur « Salons / Restaurants » passe d’un secteur à l’autre.
 
-Salons fictifs : tarifs indicatifs, coordonnées entre crochets à personnaliser.
+Établissements fictifs : tarifs et cartes indicatifs, coordonnées entre crochets à personnaliser.
 Photographies : [Unsplash](https://unsplash.com) (licence Unsplash), utilisées à titre d’illustration.

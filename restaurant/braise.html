@@ -1,0 +1,527 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Braise — cuisine au feu de bois, Bordeaux (maquette)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500..900&family=Inter+Tight:wght@400..700&family=DM+Mono:wght@400;500&display=swap">
+<style>
+/* ===== version ordinateur (maquette 1440 px, mise à l'échelle) ===== */
+:root{--char:#14100E;--char2:#1C1613;--char3:#2A211C;--bone:#EFE7DD;--ash:#A8998C;--ember:#FF5A1F;--ember2:#FF9A4D;--line:rgba(239,231,221,.13)}
+*{box-sizing:border-box;margin:0;padding:0}
+.dk{width:1440px;position:relative;background:var(--char);color:var(--bone);font-family:'Inter Tight',sans-serif;font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+.dk .bs{font-family:'Big Shoulders Display',sans-serif;text-transform:uppercase;letter-spacing:.005em}
+.dk .mono{font-family:'DM Mono',monospace;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--ash)}
+.dk .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-weight:700;font-size:15px;padding:16px 26px;border-radius:999px;white-space:nowrap}
+.dk .btn svg{width:16px;height:16px}
+.dk .btn.e{background:var(--ember);color:var(--char)}
+.dk .btn.o{border:1.5px solid var(--bone);color:var(--bone);padding:14.5px 24px}
+.dk .ph{border:1px dashed rgba(239,231,221,.35);border-radius:5px;padding:0 6px;color:var(--ash);white-space:nowrap;font-size:.94em}
+.dk .heat{height:3px;background:linear-gradient(90deg,var(--ember),var(--ember2) 30%,rgba(255,154,77,0) 75%)}
+.dk .wrap{padding:0 80px}
+.dk .sh{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-bottom:48px}
+.dk .sh h2{font-family:'Big Shoulders Display';font-weight:900;text-transform:uppercase;font-size:84px;line-height:.9;margin-top:16px}
+.dk .sh h2 em{font-style:normal;color:var(--ember)}
+.dk .sh p{max-width:380px;color:var(--ash);font-size:16.5px}
+.dk .label{display:flex;align-items:center;gap:12px}
+.dk .label i{width:9px;height:9px;border-radius:50%;background:var(--ember);box-shadow:0 0 0 5px rgba(255,90,31,.18),0 0 18px var(--ember)}
+.dk header{position:absolute;left:0;right:0;top:0;z-index:5;display:flex;align-items:center;justify-content:space-between;padding:28px 80px}
+.dk .logo{display:flex;align-items:center;gap:12px}
+.dk .logo b{font-family:'Big Shoulders Display';font-weight:900;font-size:40px;letter-spacing:.04em;line-height:1}
+.dk .logo .fl{width:18px;height:26px}
+.dk .logo small{font-family:'DM Mono';font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ash);border-left:1px solid var(--line);padding-left:12px;line-height:1.35}
+.dk nav{display:flex;gap:32px;font-weight:600;font-size:15px}
+.dk .hr{display:flex;align-items:center;gap:22px}
+.dk .hero{position:relative;height:1060px;overflow:hidden}
+.dk .hero .bg{position:absolute;inset:0;background:url(img/f-grill.jpg) 70% 50%/cover}
+.dk .hero .shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,16,14,.97) 0%,rgba(20,16,14,.88) 38%,rgba(20,16,14,.15) 70%,rgba(20,16,14,.35) 100%),linear-gradient(0deg,rgba(20,16,14,1) 0%,rgba(20,16,14,0) 30%)}
+.dk .hero .in{position:relative;padding:190px 80px 0;max-width:820px}
+.dk .hero h1{font-family:'Big Shoulders Display';font-weight:900;text-transform:uppercase;font-size:148px;line-height:.84;letter-spacing:-.005em}
+.dk .hero h1 em{font-style:normal;color:var(--ember);display:block;text-shadow:0 0 60px rgba(255,90,31,.35)}
+.dk .hero p.lede{font-size:20px;color:#D9CFC4;max-width:520px;margin-top:30px}
+.dk .book{position:absolute;right:80px;bottom:120px;width:430px;background:rgba(28,22,19,.92);border:1px solid var(--line);border-radius:22px;padding:26px;backdrop-filter:blur(8px)}
+.dk .book h3{font-family:'Big Shoulders Display';font-weight:800;text-transform:uppercase;font-size:30px;letter-spacing:.01em}
+.dk .book .f{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:8px;margin:18px 0 14px}
+.dk .book .f div{background:var(--char3);border-radius:12px;padding:10px 12px}
+.dk .book .f span{display:block;font-family:'DM Mono';font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ash)}
+.dk .book .f b{display:flex;justify-content:space-between;align-items:center;font-size:15px;margin-top:3px}
+.dk .book .f b svg{width:12px;height:12px;color:var(--ash)}
+.dk .book .btn{width:100%}
+.dk .book .note{margin-top:14px;font-size:13.5px;color:var(--ash);display:flex;gap:8px;align-items:flex-start}
+.dk .book .note svg{width:16px;height:16px;flex:none;color:var(--ember);margin-top:2px}
+.dk .facts{position:absolute;left:80px;right:80px;bottom:0;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line)}
+.dk .facts div{padding:22px 20px 28px 0}
+.dk .facts .mono{display:block;margin-bottom:4px}
+.dk .facts b{font-weight:600;font-size:16px}
+.dk .week{padding:120px 80px 110px;display:grid;grid-template-columns:1.2fr .8fr;gap:70px}
+.dk .menu-h{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid var(--line);padding-bottom:18px}
+.dk .menu-h b{font-family:'Big Shoulders Display';font-weight:800;font-size:34px;text-transform:uppercase}
+.dk .menu-h b span{color:var(--ember)}
+.dk .course{display:grid;grid-template-columns:70px 1fr auto;gap:18px;align-items:baseline;padding:22px 0;border-bottom:1px solid var(--line)}
+.dk .course .n{font-family:'DM Mono';font-size:15px;color:var(--ember)}
+.dk .course b{display:block;font-size:21px;font-weight:600;letter-spacing:-.01em}
+.dk .course small{display:block;color:var(--ash);font-size:15px;margin-top:3px}
+.dk .course .t{font-family:'DM Mono';font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--line);border-radius:999px;padding:5px 11px;color:#D9CFC4;white-space:nowrap}
+.dk .extras{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:26px}
+.dk .extras div{background:var(--char2);border:1px solid var(--line);border-radius:16px;padding:18px}
+.dk .extras b{display:block;font-family:'Big Shoulders Display';font-weight:800;font-size:28px}
+.dk .extras span{font-size:14px;color:var(--ash)}
+.dk .illu{margin-top:18px;font-size:13.5px;color:var(--ash)}
+.dk .arch{border-radius:300px 300px 22px 22px;background-size:cover;background-position:center}
+.dk .week .arch{height:640px;position:relative}
+.dk .week .cap{position:absolute;left:22px;bottom:22px;right:22px;background:rgba(20,16,14,.8);border-radius:14px;padding:14px 18px;font-size:14.5px;display:flex;justify-content:space-between;align-items:center}
+.dk .feu{padding:110px 80px;background:var(--char2);position:relative}
+.dk .three{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.dk .fire .arch{height:420px}
+.dk .fire .mono{display:block;margin:22px 0 8px;color:var(--ember)}
+.dk .fire h3{font-family:'Big Shoulders Display';font-weight:800;text-transform:uppercase;font-size:40px;line-height:1}
+.dk .fire p{color:var(--ash);margin-top:10px;font-size:16px}
+.dk .fire .temp{margin-top:16px;display:flex;align-items:center;gap:12px;font-family:'DM Mono';font-size:12.5px;color:#D9CFC4}
+.dk .fire .temp .bar{flex:1;height:6px;border-radius:9px;background:var(--char3);overflow:hidden}
+.dk .fire .temp .bar i{display:block;height:100%;border-radius:9px;background:linear-gradient(90deg,#7A2A10,var(--ember),var(--ember2))}
+.dk .comptoir{display:grid;grid-template-columns:1fr 1fr;min-height:560px}
+.dk .comptoir .img{background:url(img/f-salle.jpg) center/cover}
+.dk .comptoir .txt{padding:100px 80px;display:flex;flex-direction:column;justify-content:center}
+.dk .comptoir h2{font-family:'Big Shoulders Display';font-weight:900;text-transform:uppercase;font-size:72px;line-height:.92;margin:16px 0 22px}
+.dk .comptoir h2 em{font-style:normal;color:var(--ember)}
+.dk .comptoir p{color:#D9CFC4;max-width:500px}
+.dk .comptoir ul{list-style:none;margin-top:28px;display:grid;gap:12px}
+.dk .comptoir li{display:flex;gap:12px;align-items:center;font-size:16px}
+.dk .comptoir li i{width:8px;height:8px;border-radius:50%;background:var(--ember)}
+.dk .team{padding:110px 80px}
+.dk .tm{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.dk .mem .pic{height:440px;border-radius:22px;background-size:cover;background-position:center 30%;filter:grayscale(.15)}
+.dk .mem .row{display:flex;justify-content:space-between;align-items:baseline;margin-top:18px}
+.dk .mem h3{font-family:'Big Shoulders Display';font-weight:800;text-transform:uppercase;font-size:40px;line-height:1}
+.dk .mem p{color:var(--ash);font-size:15.5px;margin-top:6px}
+.dk .passe{padding:0 0 110px}
+.dk .strip{display:grid;grid-template-columns:1.2fr .8fr 1fr .8fr 1.2fr;gap:12px;padding:0 80px;align-items:end}
+.dk .strip div{background-size:cover;background-position:center;border-radius:18px}
+.dk .infos{padding:110px 80px;background:var(--char2);display:grid;grid-template-columns:.9fr 1.1fr;gap:64px}
+.dk .infos h3{font-family:'DM Mono';font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ember);margin:34px 0 10px;font-weight:500}
+.dk .hrow{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--line);font-size:16px}
+.dk .hrow span:last-child{font-family:'DM Mono';font-size:14.5px}
+.dk .hrow.off span:last-child{color:var(--ash)}
+.dk .acc{display:grid;grid-template-columns:1fr 1fr;gap:16px 24px;font-size:15.5px}
+.dk .acc b{display:block;font-weight:600}
+.dk .acc span{color:var(--ash)}
+.dk .mapbox{border-radius:26px;overflow:hidden;position:relative;height:600px;border:1px solid var(--line)}
+.dk .mapbox svg{width:100%;height:100%}
+.dk .mapcard{position:absolute;left:24px;right:24px;bottom:24px;background:var(--char);border:1px solid var(--line);border-radius:18px;padding:20px 22px;display:flex;justify-content:space-between;align-items:center}
+.dk .mapcard b{font-family:'Big Shoulders Display';font-weight:800;text-transform:uppercase;font-size:26px;line-height:1}
+.dk .mapcard p{font-size:14.5px;color:var(--ash);margin-top:4px}
+.dk .final{position:relative;overflow:hidden;padding:120px 80px;text-align:center;background:radial-gradient(60% 120% at 50% 120%,rgba(255,90,31,.55),rgba(255,90,31,0) 70%),var(--char)}
+.dk .final h2{font-family:'Big Shoulders Display';font-weight:900;text-transform:uppercase;font-size:130px;line-height:.86}
+.dk .final h2 em{font-style:normal;color:var(--ember)}
+.dk .final p{color:#D9CFC4;margin:22px auto 34px;max-width:520px;font-size:18px}
+.dk .final .acts{display:flex;justify-content:center;gap:12px}
+.dk footer{border-top:1px solid var(--line);padding:56px 80px 34px;color:var(--ash);font-size:15px}
+.dk .ft{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:40px;padding-bottom:40px;border-bottom:1px solid var(--line)}
+.dk footer h4{font-family:'DM Mono';font-weight:500;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--bone);margin-bottom:14px}
+.dk footer .l{display:block;padding:3px 0}
+.dk .fb{display:flex;justify-content:space-between;padding-top:24px;font-size:13px}
+.dk .fb span span{margin-left:22px}
+html{scroll-behavior:smooth}
+body{margin:0;background:#14100E;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.dk{overflow:hidden}
+/* ===== version mobile ===== */
+:root{--char:#14100E;--char2:#1C1613;--char3:#2A211C;--bone:#EFE7DD;--ash:#A8998C;--ember:#FF5A1F;--ember2:#FF9A4D;--line:rgba(239,231,221,.13)}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--char)}
+.mb{color:var(--bone);font-family:'Inter Tight',sans-serif;font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.mb .p{padding:0 20px}
+.mb .mono{font-family:'DM Mono',monospace;font-size:11.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--ash)}
+.mb .label{display:flex;align-items:center;gap:10px}
+.mb .label i{width:8px;height:8px;border-radius:50%;background:var(--ember);box-shadow:0 0 0 4px rgba(255,90,31,.18),0 0 14px var(--ember)}
+.mb h2{font-family:'Big Shoulders Display';font-weight:900;text-transform:uppercase;font-size:50px;line-height:.9;margin-top:12px}
+.mb h2 em{font-style:normal;color:var(--ember)}
+.mb .btn{display:flex;align-items:center;justify-content:center;gap:10px;font-weight:700;font-size:15px;padding:15px 20px;border-radius:999px;white-space:nowrap}
+.mb .btn svg{width:15px;height:15px}
+.mb .btn.e{background:var(--ember);color:var(--char)}
+.mb .btn.o{border:1.5px solid var(--bone);padding:13.5px 18px}
+.mb .ph{border:1px dashed rgba(239,231,221,.35);border-radius:5px;padding:0 5px;color:var(--ash);white-space:nowrap;font-size:.93em}
+.mb section{position:relative}
+.mb header{display:flex;align-items:center;justify-content:space-between;padding:14px 20px;position:absolute;left:0;right:0;top:0;z-index:3}
+.mb .logo{display:flex;align-items:center;gap:8px}
+.mb .logo b{font-family:'Big Shoulders Display';font-weight:900;font-size:30px;letter-spacing:.04em;line-height:1}
+.mb .logo svg{width:14px;height:20px}
+.mb .hr{display:flex;gap:10px;align-items:center}
+.mb .hr .btn{padding:10px 15px;font-size:13px}
+.mb .burger{width:40px;height:40px;border-radius:50%;border:1.5px solid var(--line);display:grid;place-items:center;background:rgba(20,16,14,.5)}
+.mb .burger svg{width:18px;height:18px}
+.mb .hero{padding:0 0 10px}
+.mb .hero .ph-top{height:420px;background:url(img/f-grill.jpg) 62% 50%/cover;position:relative}
+.mb .hero .ph-top::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,16,14,.55) 0%,rgba(20,16,14,0) 30%,rgba(20,16,14,.2) 60%,var(--char) 100%)}
+.mb .hero .in{padding:0 20px;margin-top:-150px;position:relative}
+.mb .hero h1{font-family:'Big Shoulders Display';font-weight:900;text-transform:uppercase;font-size:76px;line-height:.84;margin-top:16px}
+.mb .hero h1 em{font-style:normal;color:var(--ember);display:block}
+.mb .hero p{color:#D9CFC4;margin-top:16px;font-size:16px}
+.mb .book{margin:24px 20px 0;background:var(--char2);border:1px solid var(--line);border-radius:20px;padding:18px}
+.mb .book h3{font-family:'Big Shoulders Display';font-weight:800;text-transform:uppercase;font-size:24px}
+.mb .book .f{display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:6px;margin:12px 0}
+.mb .book .f div{background:var(--char3);border-radius:11px;padding:8px 10px}
+.mb .book .f span{display:block;font-family:'DM Mono';font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ash)}
+.mb .book .f b{font-size:14.5px}
+.mb .book .note{font-size:12.5px;color:var(--ash);margin-top:10px}
+.mb .chips{display:flex;gap:8px;overflow:hidden;padding:20px 0 34px 20px}
+.mb .chips span{flex:none;border:1px solid var(--line);border-radius:12px;padding:9px 12px;font-size:13px;line-height:1.3}
+.mb .chips b{display:block;font-weight:600;font-size:13.5px}
+.mb .week{padding:40px 20px 30px;border-top:1px solid var(--line)}
+.mb .mh{display:flex;justify-content:space-between;align-items:baseline;margin:22px 0 4px;padding-bottom:12px;border-bottom:1px solid var(--line)}
+.mb .mh b{font-family:'Big Shoulders Display';font-weight:800;font-size:24px;text-transform:uppercase}
+.mb .mh b span{color:var(--ember)}
+.mb .course{display:grid;grid-template-columns:34px 1fr;gap:10px;padding:14px 0;border-bottom:1px solid var(--line)}
+.mb .course .n{font-family:'DM Mono';font-size:13px;color:var(--ember);padding-top:2px}
+.mb .course b{display:block;font-size:16.5px;font-weight:600;line-height:1.3}
+.mb .course small{display:block;color:var(--ash);font-size:13.5px;margin-top:2px}
+.mb .course .t{display:inline-block;margin-top:8px;font-family:'DM Mono';font-size:10px;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--line);border-radius:999px;padding:3px 9px;color:#D9CFC4}
+.mb .ex{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:16px}
+.mb .ex div{background:var(--char2);border:1px solid var(--line);border-radius:14px;padding:12px 14px}
+.mb .ex b{display:block;font-family:'Big Shoulders Display';font-weight:800;font-size:24px}
+.mb .ex span{font-size:12.5px;color:var(--ash);line-height:1.35;display:block}
+.mb .illu{font-size:12px;color:var(--ash);margin-top:12px}
+.mb .feu{background:var(--char2);padding:44px 0 40px}
+.mb .rail{display:flex;gap:12px;overflow:hidden;padding:24px 20px 0}
+.mb .fc{flex:none;width:250px}
+.mb .fc .arch{height:270px;border-radius:140px 140px 18px 18px;background-size:cover;background-position:center}
+.mb .fc .mono{display:block;margin:14px 0 4px;color:var(--ember)}
+.mb .fc h3{font-family:'Big Shoulders Display';font-weight:800;text-transform:uppercase;font-size:30px;line-height:1}
+.mb .fc p{color:var(--ash);font-size:14px;margin-top:6px}
+.mb .dots{display:flex;gap:6px;justify-content:center;margin-top:22px}
+.mb .dots i{width:7px;height:7px;border-radius:50%;background:#4A3D35}
+.mb .dots i.on{width:22px;border-radius:9px;background:var(--ember)}
+.mb .comp .img{height:230px;background:url(img/f-salle.jpg) center/cover}
+.mb .comp .txt{padding:30px 20px 10px}
+.mb .comp p{color:#D9CFC4;font-size:15px;margin-top:14px}
+.mb .team{padding:44px 20px 0}
+.mb .mem{display:grid;grid-template-columns:76px 1fr;gap:14px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line)}
+.mb .mem .av{width:76px;height:76px;border-radius:18px;background-size:cover;background-position:center 30%}
+.mb .mem h3{font-family:'Big Shoulders Display';font-weight:800;text-transform:uppercase;font-size:26px;line-height:1}
+.mb .mem .mono{color:var(--ember);display:block;margin-top:4px}
+.mb .mem p{font-size:13.5px;color:var(--ash);margin-top:2px}
+.mb .team .note{font-size:12px;color:var(--ash);margin-top:10px}
+.mb .passe{padding:44px 0 0}
+.mb .strip{display:flex;gap:10px;overflow:hidden;padding:20px 20px 0;align-items:end}
+.mb .strip div{flex:none;background-size:cover;background-position:center;border-radius:16px}
+.mb .infos{padding:44px 20px 0}
+.mb .today{margin-top:18px;background:var(--char2);border:1px solid rgba(255,90,31,.45);border-radius:16px;padding:14px 16px;display:flex;justify-content:space-between;align-items:center}
+.mb .today b{font-family:'Big Shoulders Display';font-weight:800;text-transform:uppercase;font-size:22px;line-height:1}
+.mb .today span{font-family:'DM Mono';font-size:12.5px;color:#D9CFC4}
+.mb .today em{font-style:normal;background:var(--ember);color:var(--char);font-size:11.5px;font-weight:700;padding:4px 9px;border-radius:999px}
+.mb .hrow{display:flex;justify-content:space-between;padding:10px 2px;border-bottom:1px solid var(--line);font-size:14.5px}
+.mb .hrow span:last-child{font-family:'DM Mono';font-size:13px}
+.mb .hrow.off span:last-child{color:var(--ash)}
+.mb .map{margin-top:20px;border-radius:20px;overflow:hidden;height:230px;border:1px solid var(--line)}
+.mb .map svg{width:100%;height:100%}
+.mb .addr{margin-top:14px;font-size:14.5px}
+.mb .addr b{display:block;font-family:'Big Shoulders Display';font-weight:800;text-transform:uppercase;font-size:22px;margin-bottom:4px}
+.mb .two{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px}
+.mb .two .btn{padding:13px 10px;font-size:14px}
+.mb .acc{margin-top:16px;font-size:14px;color:#D9CFC4;display:grid;gap:6px}
+.mb .final{margin-top:50px;padding:56px 20px 50px;text-align:center;background:radial-gradient(90% 90% at 50% 120%,rgba(255,90,31,.6),rgba(255,90,31,0) 70%),var(--char)}
+.mb .final h2{font-size:64px;margin-top:12px}
+.mb .final p{color:#D9CFC4;margin:14px 0 22px;font-size:15px}
+.mb footer{border-top:1px solid var(--line);padding:34px 20px 120px;color:var(--ash);font-size:14px}
+.mb footer .links{display:grid;grid-template-columns:1fr 1fr;gap:6px 14px;margin:20px 0;color:var(--bone)}
+.mb footer .sm{font-size:12px;border-top:1px solid var(--line);padding-top:14px;display:flex;justify-content:space-between}
+.mb .sticky{width:390px;padding:12px 16px 26px;background:rgba(20,16,14,.96);border-top:1px solid var(--line);display:grid;grid-template-columns:52px 1fr;gap:10px}
+.mb .sticky .call{width:52px;height:52px;border-radius:50%;border:1.5px solid var(--bone);display:grid;place-items:center}
+.mb .sticky .call svg{width:20px;height:20px}
+
+.mb .rail,.mb .strip,.mb .chips{overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-right:20px}
+.mb .rail::-webkit-scrollbar,.mb .strip::-webkit-scrollbar,.mb .chips::-webkit-scrollbar{display:none}
+.mb .fc,.mb .strip>div{scroll-snap-align:start;scroll-margin-left:20px}
+.mb .sticky{position:fixed;left:0;right:0;bottom:0;width:auto;z-index:20;padding-bottom:max(16px,env(safe-area-inset-bottom))}
+
+.mb{display:none}
+@media (max-width:760px){.dk{display:none}.mb{display:block}}
+</style>
+</head>
+<body>
+<div class="dk">
+
+
+<header>
+  <div class="logo"><svg class="fl" viewBox="0 0 18 26"><path d="M9 1c1 5 7 8 7 15a7 7 0 0 1-14 0c0-4 2-6 3-8 .5 3 2 4 3 4 0-4-1-7 1-11z" fill="#FF5A1F"/></svg><b>BRAISE</b><small>Feu de bois<br>Bordeaux · Chartrons</small></div>
+  <nav><a href="#semaine">La semaine</a><a href="#feu">Le feu</a><a href="#comptoir">Le comptoir</a><a href="#equipe">Équipe</a><a href="#infos">Infos</a></nav>
+  <div class="hr"><span class="mono" style="color:#D9CFC4">Mar → sam · dès 19h</span><span class="btn e" style="padding:12px 20px;font-size:14px">Réserver</span></div>
+</header>
+
+<section class="hero">
+  <div class="bg"></div><div class="shade"></div>
+  <div class="in">
+    <div class="label mono" style="color:#D9CFC4"><i></i>Restaurant · cuisine au feu de bois</div>
+    <h1 style="margin-top:26px">Tout passe<em>par la braise.</em></h1>
+    <p class="lede">Légumes, poissons et viandes cuits sur le feu, un menu court qui change chaque semaine et des vins nature. Sur les quais des Chartrons, à Bordeaux.</p>
+  </div>
+  <div class="book">
+    <h3>Réserver une table</h3>
+    <div class="f">
+      <div><span>Date</span><b>Ce soir <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></b></div>
+      <div><span>Couverts</span><b>2 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></b></div>
+      <div><span>Heure</span><b>20:00 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></b></div>
+    </div>
+    <span class="btn e">Voir les disponibilités <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+    <p class="note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg><span>Ouvre <span class="ph">[outil de réservation]</span> avec vos choix. Comptoir face au feu : sans réservation.</span></p>
+  </div>
+  <div class="facts">
+    <div><span class="mono">Ouvert</span><b>Mar → sam, 19h – 23h</b></div>
+    <div><span class="mono">Le samedi</span><b>Aussi le midi, 12h – 14h30</b></div>
+    <div><span class="mono">Tram B</span><b>Arrêt Chartrons, 3 min</b></div>
+    <div><span class="mono">Adresse</span><b><span class="ph">[Adresse], 33000 Bordeaux</span></b></div>
+  </div>
+</section>
+
+<section class="week" id="semaine">
+  <div>
+    <div class="label mono"><i></i>Cette semaine sur la braise</div>
+    <div class="sh" style="margin-bottom:34px"><h2>Le menu<br><em>change le mardi.</em></h2></div>
+    <div class="menu-h"><b>Semaine 44 · <span>Menu en 5 temps</span></b><span class="mono" style="color:var(--bone);font-size:15px">52 € · par personne</span></div>
+    <div class="course"><span class="n">01</span><div><b>Pain au levain grillé, beurre fumé</b><small>Le pain du fournil voisin, passé sur la grille.</small></div><span class="t">Braise vive</span></div>
+    <div class="course"><span class="n">02</span><div><b>Poireaux cuits sous la cendre</b><small>Vinaigrette à la noisette, herbes.</small></div><span class="t">Sous la cendre</span></div>
+    <div class="course"><span class="n">03</span><div><b>Maquereau flambé</b><small>Pickles de betterave, crème crue.</small></div><span class="t">Braise vive</span></div>
+    <div class="course"><span class="n">04</span><div><b>Pièce de bœuf, jus au sarment</b><small>Pommes de terre en croûte de sel.</small></div><span class="t">Fumée de sarments</span></div>
+    <div class="course"><span class="n">05</span><div><b>Poire rôtie au feu</b><small>Caramel au beurre salé, sarrasin.</small></div><span class="t">Braise douce</span></div>
+    <div class="extras">
+      <div><b>+ 32 €</b><span>Accord 4 verres de vins nature</span></div>
+      <div><b>34 €</b><span>Samedi midi, menu en 3 temps</span></div>
+      <div><b>Végétarien</b><span>Menu adapté, sur demande</span></div>
+    </div>
+    <p class="illu">Menu et prix donnés à titre d’exemple. Allergies : prévenez-nous à la réservation.</p>
+  </div>
+  <div style="padding-top:40px"><div class="arch" style="background-image:url(img/f-steak.jpg)"><div class="cap"><span>Temps 04 · pièce de bœuf</span><span class="mono" style="color:var(--ember)">Fumée de sarments</span></div></div></div>
+</section>
+
+<section class="feu" id="feu">
+  <div class="sh"><div><div class="label mono"><i></i>Le feu</div><h2>Trois façons<br><em>de cuire au bois.</em></h2></div>
+    <p>Pas de gaz en cuisine. Un foyer, du bois de chêne et de vigne, et des cuissons choisies pour chaque produit.</p></div>
+  <div class="three">
+    <div class="fire"><div class="arch" style="background-image:url(img/f-flames.jpg)"></div><span class="mono">01 · Saisir</span><h3>Braise vive</h3><p>Une chaleur forte et directe pour griller, colorer, flamber.</p><div class="temp">Chaleur<div class="bar"><i style="width:95%"></i></div></div></div>
+    <div class="fire"><div class="arch" style="background-image:url(img/f-braise.jpg)"></div><span class="mono">02 · Confire</span><h3>Sous la cendre</h3><p>Légumes enfouis dans les cendres chaudes, cuits lentement dans leur peau.</p><div class="temp">Chaleur<div class="bar"><i style="width:45%"></i></div></div></div>
+    <div class="fire"><div class="arch" style="background-image:url(img/f-four.jpg)"></div><span class="mono">03 · Parfumer</span><h3>Fumée de sarments</h3><p>Des sarments de vigne pour une fumée courte et parfumée.</p><div class="temp">Chaleur<div class="bar"><i style="width:65%"></i></div></div></div>
+  </div>
+</section>
+
+<section class="comptoir" id="comptoir">
+  <div class="img"></div>
+  <div class="txt"><div class="label mono"><i></i>Le comptoir</div>
+    <h2>Six places<br><em>face au feu.</em></h2>
+    <p>Le comptoir ne se réserve pas : on y dîne à la carte, au rythme de la cuisine. La salle, elle, accueille <span class="ph">[XX]</span> couverts sur réservation.</p>
+    <ul><li><i></i>Assiettes à partager au comptoir</li><li><i></i>Privatisation de la salle en semaine</li><li><i></i>Vins nature au verre</li></ul></div>
+</section>
+
+<section class="team" id="equipe">
+  <div class="sh"><div><div class="label mono"><i></i>L’équipe</div><h2>Au feu,<br><em>en salle.</em></h2></div><p>Prénoms et portraits illustratifs.</p></div>
+  <div class="tm">
+    <div class="mem"><div class="pic" style="background-image:url(img/f-chef.jpg)"></div><div class="row"><h3>Malo</h3><span class="mono" style="color:var(--ember)">Chef · au feu</span></div><p>Il allume le foyer chaque jour à 15h.</p></div>
+    <div class="mem"><div class="pic" style="background-image:url(img/f-cheffe.jpg)"></div><div class="row"><h3>Awa</h3><span class="mono" style="color:var(--ember)">Salle · vins</span></div><p>Elle choisit les vins et vous conseille l’accord.</p></div>
+    <div class="mem"><div class="pic" style="background-image:url(img/f-cuisinier.jpg)"></div><div class="row"><h3>Théo</h3><span class="mono" style="color:var(--ember)">Second · braises</span></div><p>Il veille sur les cendres et les cuissons lentes.</p></div>
+  </div>
+</section>
+
+<section class="passe">
+  <div class="sh wrap"><div><div class="label mono"><i></i>Au passe</div><h2>Ce qui sort<br><em>de la cuisine.</em></h2></div><p>Photos d’illustration. Sur le site final : les assiettes du restaurant.</p></div>
+  <div class="strip">
+    <div style="height:380px;background-image:url(img/f-plat1.jpg)"></div>
+    <div style="height:300px;background-image:url(img/f-flamme-chef.jpg)"></div>
+    <div style="height:420px;border-radius:220px 220px 18px 18px;background-image:url(img/f-plat2.jpg)"></div>
+    <div style="height:300px;background-image:url(img/f-poisson.jpg)"></div>
+    <div style="height:380px;background-image:url(img/f-table.jpg)"></div>
+  </div>
+</section>
+
+<section class="infos" id="infos">
+  <div>
+    <div class="label mono"><i></i>Infos pratiques</div>
+    <div class="sh" style="margin-bottom:0"><h2>Venir<br><em>chez Braise.</em></h2></div>
+    <h3>Horaires</h3>
+    <div class="hrow off"><span>Dimanche, lundi</span><span>Fermé</span></div>
+    <div class="hrow"><span>Mardi → vendredi</span><span>19:00 – 23:00</span></div>
+    <div class="hrow"><span>Samedi</span><span>12:00 – 14:30 · 19:00 – 23:00</span></div>
+    <h3>Accès & contact</h3>
+    <div class="acc">
+      <div><b>Tram B</b><span>Arrêt Chartrons</span></div>
+      <div><b>Vélo</b><span>Stationnement sur le quai</span></div>
+      <div><b>Téléphone</b><span class="ph">[05 00 00 00 00]</span></div>
+      <div><b>Groupes</b><span class="ph">[contact@braise.fr]</span></div>
+    </div>
+  </div>
+  <div class="mapbox">
+    <svg viewBox="0 0 700 600" preserveAspectRatio="xMidYMid slice">
+      <rect width="700" height="600" fill="#1C1613"/>
+      <g stroke="#2A211C" stroke-width="2"><path d="M0 110 H700 M0 230 H700 M0 350 H700 M0 470 H700 M110 0 V600 M250 0 V600 M390 0 V600 M530 0 V600"/></g>
+      <path d="M760 -20 C600 60 520 140 500 250 C480 360 560 440 520 520 C500 570 470 600 450 640" stroke="#3A2F28" stroke-width="120" fill="none"/>
+      <text x="575" y="330" fill="#A8998C" font-family="DM Mono" font-size="14" letter-spacing="3" transform="rotate(-78 575 330)">GARONNE</text>
+      <path d="M380 0 C390 120 400 240 420 600" stroke="#2F2621" stroke-width="10" fill="none"/>
+      <text x="120" y="80" fill="#EFE7DD" font-family="Big Shoulders Display" font-weight="800" font-size="26" letter-spacing="2">CHARTRONS</text>
+      <circle cx="400" cy="300" r="7" fill="#A8998C"/><text x="300" y="305" fill="#A8998C" font-family="DM Mono" font-size="12">TRAM B</text>
+      <path d="M400 300 C380 260 360 240 330 220" stroke="#FF5A1F" stroke-width="2.5" stroke-dasharray="1 8" stroke-linecap="round" fill="none"/>
+      <g transform="translate(320 210)"><circle r="46" fill="#FF5A1F" opacity=".14"/><circle r="26" fill="#FF5A1F" opacity=".25"/><path transform="translate(-9 -14)" d="M9 1c1 5 7 8 7 15a7 7 0 0 1-14 0c0-4 2-6 3-8 .5 3 2 4 3 4 0-4-1-7 1-11z" fill="#FF5A1F"/></g>
+    </svg>
+    <div class="mapcard"><div><b>Braise · Chartrons</b><p><span class="ph">[Adresse], 33000 Bordeaux</span></p></div><span class="btn e" style="padding:12px 20px;font-size:14px">Itinéraire</span></div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="mono" style="color:#D9CFC4">Tous les soirs du mardi au samedi</div>
+  <h2 style="margin-top:20px">On rallume<br><em>le feu à 19h.</em></h2>
+  <p>Réservez votre table en ligne, ou passez au comptoir.</p>
+  <div class="acts"><span class="btn e">Réserver une table <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><span class="btn o">Appeler le restaurant</span></div>
+</section>
+
+<footer>
+  <div class="ft">
+    <div><div class="logo"><svg class="fl" viewBox="0 0 18 26"><path d="M9 1c1 5 7 8 7 15a7 7 0 0 1-14 0c0-4 2-6 3-8 .5 3 2 4 3 4 0-4-1-7 1-11z" fill="#FF5A1F"/></svg><b style="color:var(--bone)">BRAISE</b></div><p style="margin-top:16px;max-width:300px">Cuisine au feu de bois, menu de la semaine et vins nature. Quartier des Chartrons, Bordeaux.</p></div>
+    <div><h4>Le restaurant</h4><span class="l">La semaine</span><span class="l">Le feu</span><span class="l">Le comptoir</span><span class="l">Équipe</span></div>
+    <div><h4>Horaires</h4><span class="l">Mar → ven : 19h – 23h</span><span class="l">Samedi : midi et soir</span><span class="l">Dim., lun. : fermé</span></div>
+    <div><h4>Contact</h4><span class="l">[Adresse], 33000 Bordeaux</span><span class="l">[05 00 00 00 00]</span><span class="l">[contact@braise.fr]</span><span class="l">[@compte]</span></div>
+  </div>
+  <div class="fb"><span>© Braise<span>Mentions légales</span><span>Confidentialité</span></span><span>Maquette — restaurant fictif · informations illustratives</span></div>
+</footer>
+
+</div>
+<div class="mb">
+
+
+<section class="hero" id="mb-hero">
+  <header>
+    <div class="logo"><svg viewBox="0 0 18 26"><path d="M9 1c1 5 7 8 7 15a7 7 0 0 1-14 0c0-4 2-6 3-8 .5 3 2 4 3 4 0-4-1-7 1-11z" fill="#FF5A1F"/></svg><b>BRAISE</b></div>
+    <div class="hr"><span class="btn e">Réserver</span><span class="burger"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 8h16M4 16h16"/></svg></span></div>
+  </header>
+  <div class="ph-top"></div>
+  <div class="in">
+    <div class="label mono" style="color:#D9CFC4"><i></i>Feu de bois · Bordeaux, Chartrons</div>
+    <h1>Tout passe<em>par la braise.</em></h1>
+    <p>Un menu court qui change chaque semaine, cuit sur le feu, et des vins nature.</p>
+  </div>
+  <div class="book">
+    <h3>Réserver une table</h3>
+    <div class="f"><div><span>Date</span><b>Ce soir</b></div><div><span>Couverts</span><b>2</b></div><div><span>Heure</span><b>20:00</b></div></div>
+    <span class="btn e">Voir les disponibilités <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+    <p class="note">Via <span class="ph">[outil de réservation]</span> · comptoir sans réservation</p>
+  </div>
+  <div class="chips">
+    <span><b>Mar → sam</b>19h – 23h</span><span><b>Samedi midi</b>12h – 14h30</span><span><b>Tram B</b>Chartrons</span><span><b>Végétarien</b>sur demande</span>
+  </div>
+</section>
+
+<section class="week" id="mb-week">
+  <div class="label mono"><i></i>Cette semaine</div>
+  <h2>Le menu<br><em>change le mardi.</em></h2>
+  <div class="mh"><b>Semaine 44 · <span>5 temps</span></b><span class="mono" style="color:var(--bone)">52 €</span></div>
+  <div class="course"><span class="n">01</span><div><b>Pain au levain grillé, beurre fumé</b><span class="t">Braise vive</span></div></div>
+  <div class="course"><span class="n">02</span><div><b>Poireaux cuits sous la cendre</b><small>Vinaigrette à la noisette</small><span class="t">Sous la cendre</span></div></div>
+  <div class="course"><span class="n">03</span><div><b>Maquereau flambé</b><small>Pickles de betterave</small><span class="t">Braise vive</span></div></div>
+  <div class="course"><span class="n">04</span><div><b>Pièce de bœuf, jus au sarment</b><span class="t">Fumée de sarments</span></div></div>
+  <div class="course" style="border-bottom:0"><span class="n">05</span><div><b>Poire rôtie au feu</b><span class="t">Braise douce</span></div></div>
+  <div class="ex"><div><b>+ 32 €</b><span>Accord 4 verres de vins nature</span></div><div><b>34 €</b><span>Samedi midi, 3 temps</span></div></div>
+  <p class="illu">Menu et prix donnés à titre d’exemple.</p>
+</section>
+
+<section class="feu" id="mb-feu">
+  <div class="p"><div class="label mono"><i></i>Le feu</div><h2>Trois façons<br><em>de cuire.</em></h2></div>
+  <div class="rail" data-rail="feu">
+    <div class="fc"><div class="arch" style="background-image:url(img/f-flames.jpg)"></div><span class="mono">01 · Saisir</span><h3>Braise vive</h3><p>Chaleur forte pour griller et flamber.</p></div>
+    <div class="fc"><div class="arch" style="background-image:url(img/f-braise.jpg)"></div><span class="mono">02 · Confire</span><h3>Sous la cendre</h3><p>Légumes cuits lentement dans leur peau.</p></div>
+    <div class="fc"><div class="arch" style="background-image:url(img/f-four.jpg)"></div><span class="mono">03 · Parfumer</span><h3>Fumée de sarments</h3><p>Une fumée courte et parfumée.</p></div>
+  </div>
+  <div class="dots" data-dots="feu"><i class="on"></i><i></i><i></i></div>
+</section>
+
+<section class="comp" id="mb-comp">
+  <div class="img"></div>
+  <div class="txt"><div class="label mono"><i></i>Le comptoir</div><h2>Six places<br><em>face au feu.</em></h2>
+    <p>Sans réservation, à la carte, au rythme de la cuisine.</p></div>
+</section>
+
+<section class="team" id="mb-team">
+  <div class="label mono"><i></i>L’équipe</div><h2>Au feu,<br><em>en salle.</em></h2>
+  <div style="margin-top:10px">
+    <div class="mem"><div class="av" style="background-image:url(img/f-chef.jpg)"></div><div><h3>Malo</h3><span class="mono">Chef · au feu</span><p>Il allume le foyer chaque jour à 15h.</p></div></div>
+    <div class="mem"><div class="av" style="background-image:url(img/f-cheffe.jpg)"></div><div><h3>Awa</h3><span class="mono">Salle · vins</span><p>Elle vous conseille l’accord.</p></div></div>
+    <div class="mem" style="border-bottom:0"><div class="av" style="background-image:url(img/f-cuisinier.jpg)"></div><div><h3>Théo</h3><span class="mono">Second · braises</span><p>Cuissons lentes et cendres.</p></div></div>
+  </div>
+  <p class="note">Prénoms et portraits illustratifs.</p>
+</section>
+
+<section class="passe" id="mb-passe">
+  <div class="p"><div class="label mono"><i></i>Au passe</div><h2>Ce qui sort<br><em>de la cuisine.</em></h2></div>
+  <div class="strip">
+    <div style="width:150px;height:200px;background-image:url(img/f-flamme-chef.jpg)"></div>
+    <div style="width:200px;height:260px;border-radius:110px 110px 16px 16px;background-image:url(img/f-plat2.jpg)"></div>
+    <div style="width:150px;height:200px;background-image:url(img/f-plat1.jpg)"></div>
+    <div style="width:150px;height:200px;background-image:url(img/f-poisson.jpg)"></div>
+  </div>
+  <p class="p" style="font-size:12px;color:var(--ash);margin-top:10px">Photos d’illustration.</p>
+</section>
+
+<section class="infos" id="mb-infos">
+  <div class="label mono"><i></i>Infos pratiques</div><h2>Venir<br><em>chez Braise.</em></h2>
+  <div class="today"><div><b>Ce soir, mardi</b><br><span>19:00 – 23:00</span></div><em>Ouvert</em></div>
+  <div style="margin-top:6px">
+    <div class="hrow"><span>Mer → ven</span><span>19:00 – 23:00</span></div>
+    <div class="hrow"><span>Samedi</span><span>12:00 – 14:30 · 19:00 – 23:00</span></div>
+    <div class="hrow off"><span>Dim, lun</span><span>Fermé</span></div>
+  </div>
+  <div class="map"><svg viewBox="0 0 390 230" preserveAspectRatio="xMidYMid slice">
+    <rect width="390" height="230" fill="#1C1613"/>
+    <g stroke="#2A211C" stroke-width="2"><path d="M0 60 H390 M0 130 H390 M0 200 H390 M80 0 V230 M180 0 V230 M280 0 V230"/></g>
+    <path d="M430 -10 C340 30 300 80 300 130 C300 180 330 210 310 260" stroke="#3A2F28" stroke-width="70" fill="none"/>
+    <path d="M225 0 C230 80 235 150 245 230" stroke="#2F2621" stroke-width="7" fill="none"/>
+    <text x="24" y="40" fill="#EFE7DD" font-family="Big Shoulders Display" font-weight="800" font-size="18" letter-spacing="1.5">CHARTRONS</text>
+    <circle cx="232" cy="118" r="5" fill="#A8998C"/><text x="244" y="122" fill="#A8998C" font-family="DM Mono" font-size="10">TRAM B</text>
+    <path d="M232 118 C215 100 200 92 180 88" stroke="#FF5A1F" stroke-width="2" stroke-dasharray="1 6" stroke-linecap="round" fill="none"/>
+    <g transform="translate(172 84)"><circle r="30" fill="#FF5A1F" opacity=".15"/><path transform="translate(-9 -14)" d="M9 1c1 5 7 8 7 15a7 7 0 0 1-14 0c0-4 2-6 3-8 .5 3 2 4 3 4 0-4-1-7 1-11z" fill="#FF5A1F"/></g>
+  </svg></div>
+  <p class="addr"><b>Braise · Chartrons</b><span class="ph">[Adresse], 33000 Bordeaux</span></p>
+  <div class="two"><span class="btn e">Itinéraire</span><span class="btn o">Appeler</span></div>
+  <div class="acc"><span>Tram B, arrêt Chartrons · 3 min</span><span>Groupes : <span class="ph">[contact@braise.fr]</span></span></div>
+</section>
+
+<section class="final" id="mb-final">
+  <div class="mono" style="color:#D9CFC4">Du mardi au samedi</div>
+  <h2>On rallume<br><em>le feu à 19h.</em></h2>
+  <p>Réservez en ligne, ou passez au comptoir.</p>
+  <span class="btn e">Réserver une table</span>
+</section>
+
+<footer id="mb-foot">
+  <div class="logo"><svg viewBox="0 0 18 26"><path d="M9 1c1 5 7 8 7 15a7 7 0 0 1-14 0c0-4 2-6 3-8 .5 3 2 4 3 4 0-4-1-7 1-11z" fill="#FF5A1F"/></svg><b>BRAISE</b></div>
+  <p style="margin-top:10px">Cuisine au feu de bois, Chartrons, Bordeaux.</p>
+  <div class="links"><span>La semaine</span><span>Le feu</span><span>Le comptoir</span><span>Équipe</span><span>Infos</span><span>Mentions légales</span></div>
+  <div class="sm"><span>[05 00 00 00 00]</span><span>Maquette — restaurant fictif</span></div>
+</footer>
+
+<div class="sticky" id="sticky">
+  <span class="call"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></span>
+  <span class="btn e">Réserver une table</span>
+</div>
+
+
+
+</div>
+<script>
+  // la maquette ordinateur est dessinée sur 1440 px : on la met à l'échelle de la fenêtre
+  const dk = document.querySelector('.dk');
+  let lastW = 0;
+  function fit() {
+    const w = document.documentElement.clientWidth;
+    if (w === lastW) return;
+    lastW = w;
+    dk.style.zoom = w > 760 ? w / 1440 : '';
+  }
+  addEventListener('resize', fit); setInterval(fit, 300); fit();
+
+  // points du carrousel des cuissons (mobile)
+  const rail = document.querySelector('.mb [data-rail="feu"]');
+  const dots = [...document.querySelectorAll('.mb [data-dots="feu"] i')];
+  rail.addEventListener('scroll', () => {
+    const i = Math.round(rail.scrollLeft / (rail.scrollWidth - rail.clientWidth) * (dots.length - 1));
+    dots.forEach((d, k) => d.classList.toggle('on', k === i));
+  }, { passive: true });
+</script>
+</body>
+</html>
