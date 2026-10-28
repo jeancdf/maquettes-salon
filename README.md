@@ -1,16 +1,19 @@
 # Maquettes — sites vitrines
 
-Maquettes de sites vitrines à présenter aux prospects, en trois formules, par secteur.
+Maquettes de sites vitrines à présenter aux prospects, en trois formules, par secteur : Essentiel (690 € HT), Complet (1 190 € HT) et Sur mesure (1 990 à 2 990 € HT).
 
-| Formule | Prix | Salons de coiffure | Restaurants | Mariage et événementiel | Maisons d’hôtes | Garages |
-| --- | --- | --- | --- | --- | --- | --- |
-| Essentiel | 690 € HT | `essentiel.html` (l’épi) | `restaurant/essentiel.html` (La Tablée) | `mariage/essentiel.html` (Maison Joséphine) | `hotes/essentiel.html` (Les Volets Bleus) | `garage/essentiel.html` (Garage Moreau) |
-| Complet | 1 190 € HT | `complet.html` (l’épi) | `restaurant/complet.html` (La Tablée) | `mariage/complet.html` (Maison Joséphine) | `hotes/complet.html` (Les Volets Bleus) | `garage/complet.html` (Garage Moreau) |
-| Sur mesure | 1 990 à 2 990 € HT | `ressort.html` (Ressort, Lyon) | `restaurant/braise.html`, `odette.html`, `hinoki.html` | `mariage/alba.html` (photographe), `tilleuls.html` (lieu de réception), `nocturne.html` (DJ) | `hotes/mas.html` (Provence), `tyavel.html` (Bretagne), `chalet.html` (montagne) | `garage/duval.html` (carrosserie), `atelier1965.html` (voitures anciennes), `ampere.html` (électrique) |
+| Secteur | Dossier | Essentiel et Complet | Sur mesure |
+| --- | --- | --- | --- |
+| Salons de coiffure | `/` | l’épi | `ressort.html` (Ressort, Lyon) |
+| Restaurants | `restaurant/` | La Tablée | `braise.html`, `odette.html` (bistrot), `hinoki.html` (japonais) |
+| Mariage et événementiel | `mariage/` | Maison Joséphine | `alba.html` (photographe), `tilleuls.html` (lieu de réception), `nocturne.html` (DJ) |
+| Maisons d’hôtes | `hotes/` | Les Volets Bleus | `mas.html` (Provence), `tyavel.html` (Bretagne), `chalet.html` (montagne) |
+| Garages | `garage/` | Garage Moreau | `duval.html` (carrosserie), `atelier1965.html` (voitures anciennes), `ampere.html` (électrique) |
+| Pâtisseries et traiteurs | `patisserie/` | Maison Lemoine | `celeste.html` (wedding cakes), `saison.html` (traiteur), `nour.html` (pâtisseries orientales) |
 
-Essentiel et Complet utilisent le même établissement fictif pour comparer les gammes. Le sur-mesure a sa propre identité.
+Dans chaque dossier, `essentiel.html` et `complet.html` utilisent le même établissement fictif pour comparer les gammes. Le sur-mesure a sa propre identité.
 
-Chaque secteur a une page de bascule (`index.html`, `restaurant/index.html`, `mariage/index.html`, `hotes/index.html`, `garage/index.html`) : boutons, touches numériques ou flèches ←/→, liens directs par ancre (`#essentiel`, `#complet`, `#ressort`, `#braise`, `#alba`…). Quand il y a plusieurs exemples sur mesure, « Sur mesure » ouvre un sous-choix. Le sélecteur « Salons / Restaurants / Mariage / Maisons d’hôtes / Garages » passe d’un secteur à l’autre.
+Chaque secteur a une page de bascule (`index.html` du dossier) : boutons, touches numériques ou flèches ←/→, liens directs par ancre (`#essentiel`, `#complet`, `#celeste`…). Quand il y a plusieurs exemples sur mesure, « Sur mesure » ouvre un sous-choix. Le menu « Secteur » passe d’un secteur à l’autre.
 
 Établissements fictifs : tarifs et cartes indicatifs, coordonnées entre crochets à personnaliser.
 Photographies : [Unsplash](https://unsplash.com) (licence Unsplash), utilisées à titre d’illustration.
