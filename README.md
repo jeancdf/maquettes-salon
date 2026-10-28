@@ -1,19 +1,14 @@
-# Maquettes — sites vitrines
+# Maquettes — sites vitrines (ancienne adresse)
 
-Maquettes de sites vitrines à présenter aux prospects, en trois formules, par secteur : Essentiel (690 € HT), Complet (1 190 € HT) et Sur mesure (1 990 à 2 990 € HT).
+Les maquettes sont maintenant rangées dans un repo par type de commerce :
 
-| Secteur | Dossier | Essentiel et Complet | Sur mesure |
-| --- | --- | --- | --- |
-| Salons de coiffure | `/` | l’épi | `ressort.html` (Ressort, Lyon) |
-| Restaurants | `restaurant/` | La Tablée | `braise.html`, `odette.html` (bistrot), `hinoki.html` (japonais) |
-| Mariage et événementiel | `mariage/` | Maison Joséphine | `alba.html` (photographe), `tilleuls.html` (lieu de réception), `nocturne.html` (DJ) |
-| Maisons d’hôtes | `hotes/` | Les Volets Bleus | `mas.html` (Provence), `tyavel.html` (Bretagne), `chalet.html` (montagne) |
-| Garages | `garage/` | Garage Moreau | `duval.html` (carrosserie), `atelier1965.html` (voitures anciennes), `ampere.html` (électrique) |
-| Pâtisseries et traiteurs | `patisserie/` | Maison Lemoine | `celeste.html` (wedding cakes), `saison.html` (traiteur), `nour.html` (pâtisseries orientales) |
+| Secteur | Site | Repo |
+| --- | --- | --- |
+| Salons de coiffure | https://jeancdf.github.io/maquettes-coiffure/ | [maquettes-coiffure](https://github.com/jeancdf/maquettes-coiffure) |
+| Restaurants | https://jeancdf.github.io/maquettes-restaurant/ | [maquettes-restaurant](https://github.com/jeancdf/maquettes-restaurant) |
+| Mariage et événementiel | https://jeancdf.github.io/maquettes-mariage/ | [maquettes-mariage](https://github.com/jeancdf/maquettes-mariage) |
+| Maisons d’hôtes | https://jeancdf.github.io/maquettes-maisons-hotes/ | [maquettes-maisons-hotes](https://github.com/jeancdf/maquettes-maisons-hotes) |
+| Garages | https://jeancdf.github.io/maquettes-garage/ | [maquettes-garage](https://github.com/jeancdf/maquettes-garage) |
+| Pâtisseries et traiteurs | https://jeancdf.github.io/maquettes-patisserie/ | [maquettes-patisserie](https://github.com/jeancdf/maquettes-patisserie) |
 
-Dans chaque dossier, `essentiel.html` et `complet.html` utilisent le même établissement fictif pour comparer les gammes. Le sur-mesure a sa propre identité.
-
-Chaque secteur a une page de bascule (`index.html` du dossier) : boutons, touches numériques ou flèches ←/→, liens directs par ancre (`#essentiel`, `#complet`, `#celeste`…). Quand il y a plusieurs exemples sur mesure, « Sur mesure » ouvre un sous-choix. Le menu « Secteur » passe d’un secteur à l’autre.
-
-Établissements fictifs : tarifs et cartes indicatifs, coordonnées entre crochets à personnaliser.
-Photographies : [Unsplash](https://unsplash.com) (licence Unsplash), utilisées à titre d’illustration.
+Ce repo ne contient plus que des redirections : chaque ancienne adresse (`/`, `/restaurant/`, `/garage/duval.html`, ancres `#…` comprises) renvoie vers la même maquette à sa nouvelle adresse. Les anciennes pages de bascule mènent au comparateur (`comparer.html`) du secteur.
